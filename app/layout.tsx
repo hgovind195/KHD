@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Work_Sans } from "next/font/google";
+import { Montserrat, Work_Sans, Playfair_Display, Cinzel, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -15,6 +15,29 @@ const workSans = Work_Sans({
   subsets: ["latin"],
   variable: "--font-work-sans",
   weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["400", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+  weight: ["400", "600", "700", "800", "900"],
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -46,7 +69,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${workSans.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${workSans.variable} ${playfair.variable} ${cinzel.variable} ${cormorant.variable} h-full antialiased`}
     >
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" />

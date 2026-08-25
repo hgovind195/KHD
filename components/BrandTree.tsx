@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Building, Compass, PenTool, ShieldCheck } from "lucide-react";
+import { ArrowRight, Building, Compass, PenTool, ShieldCheck, PhoneCall } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function BrandTree() {
@@ -53,16 +53,16 @@ export default function BrandTree() {
         </ScrollReveal>
 
         {/* 3 Organizational Divisions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-7xl mx-auto mt-6">
           {/* Division 2: Master Plan Engineering (Left Side Entrance) */}
           <ScrollReveal direction="left" delay={100}>
-            <div className="bg-white border border-[#E0C0B2] rounded-xl p-7 flex flex-col items-center text-center shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all duration-300 relative group md:scale-95 hover-lift">
+            <div className="bg-white border border-[#E0C0B2] hover:border-[#355E3B] rounded-2xl p-8 flex flex-col items-center text-center shadow-xl hover:-translate-y-2 transition-all duration-300 relative group hover-lift h-full">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full hidden md:block w-[2px] h-4 bg-[#355E3B]"></div>
-              <div className="w-full h-28 flex items-center justify-center mb-4 overflow-visible p-1">
+              <div className="w-full h-32 flex items-center justify-center mb-4 overflow-visible p-2">
                 <img
                   src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785736185/Screenshot_2026-08-01_092139_magic_timyra.png"
                   alt="Master Plan Engineering Consultancy Logo"
-                  className="max-h-full max-w-full object-contain transform scale-100 drop-shadow-sm"
+                  className="max-h-full max-w-full object-contain transform scale-105 drop-shadow-sm"
                 />
               </div>
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-gray-500 mb-2 bg-gray-100 px-3 py-1 rounded-full">
@@ -74,24 +74,34 @@ export default function BrandTree() {
               <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-6 flex-grow">
                 From planning to project completion, we oversee every detail. Through site supervision, survey verification, contractor coordination, and quality checks, we ensure your project is completed accurately and as planned.
               </p>
-              <Link
-                href="/services#masterplan"
-                className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest border-b-2 border-[#355E3B]/30 pb-1 hover:border-[#355E3B] transition-colors"
-              >
-                Consult Advisory <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="w-full flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                <Link
+                  href="/services#masterplan"
+                  className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest border-b-2 border-[#355E3B]/30 pb-1 hover:border-[#355E3B] transition-colors"
+                >
+                  Consult Advisory <ArrowRight className="w-4 h-4" />
+                </Link>
+                <a
+                  href="tel:+917511127335"
+                  className="inline-flex items-center gap-1.5 bg-[#355E3B] hover:bg-[#2B4C30] text-white px-3.5 py-1.5 rounded-full text-xs font-bold shadow-md transition-all hover:scale-105 active:scale-95 shrink-0"
+                  title="Call Master Plan: +91 75111 27335"
+                >
+                  <PhoneCall className="w-3.5 h-3.5 text-white" />
+                  <span>Call</span>
+                </a>
+              </div>
             </div>
           </ScrollReveal>
 
           {/* Division 1: Kerala Homes (Upward Center Entrance) */}
           <ScrollReveal direction="up" delay={200}>
-            <div className="bg-white border-2 border-[#355E3B] rounded-2xl p-8 md:p-9 flex flex-col items-center text-center shadow-xl hover:-translate-y-2 transition-all duration-300 relative group z-20 md:scale-105 hover-lift">
+            <div className="bg-white border-2 border-[#355E3B] rounded-2xl p-8 md:p-10 flex flex-col items-center text-center shadow-2xl hover:-translate-y-2 transition-all duration-300 relative group z-20 hover-lift h-full">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full hidden md:block w-[2px] h-5 bg-[#355E3B]"></div>
-              <div className="w-full h-32 flex items-center justify-center mb-4 overflow-visible p-1">
+              <div className="w-full h-36 flex items-center justify-center mb-4 overflow-visible p-2">
                 <img
                   src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1785851706/font_tp_pinjpz.png"
                   alt="Kerala Homes & Developers Logo"
-                  className="max-h-full max-w-full object-contain transform scale-110 drop-shadow-sm"
+                  className="max-h-full max-w-full object-contain transform scale-115 drop-shadow-sm"
                 />
               </div>
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] mb-2 bg-[#355E3B]/10 px-3 py-1 rounded-full border border-[#355E3B]/20">
@@ -100,27 +110,37 @@ export default function BrandTree() {
               <h3 className="font-extrabold text-2xl md:text-3xl text-[#1B1C1C] mb-4 uppercase tracking-tight">
                 KERALA HOMES
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
+              <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
                 Turnkey residential high-rises, luxury villas, and commercial complexes engineered for durability, modern elegance, and structural safety across Kerala.
               </p>
-              <Link
-                href="/services#construction"
-                className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest border-b-2 border-[#355E3B] pb-1 hover:text-[#2B4C30] hover:border-[#2B4C30] transition-colors"
-              >
-                Get In Detail <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="w-full flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                <Link
+                  href="/services#construction"
+                  className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest border-b-2 border-[#355E3B] pb-1 hover:text-[#2B4C30] hover:border-[#2B4C30] transition-colors"
+                >
+                  Get In Detail <ArrowRight className="w-4 h-4" />
+                </Link>
+                <a
+                  href="tel:+917511111000"
+                  className="inline-flex items-center gap-1.5 bg-[#355E3B] hover:bg-[#2B4C30] text-white px-3.5 py-1.5 rounded-full text-xs font-bold shadow-md transition-all hover:scale-105 active:scale-95 shrink-0"
+                  title="Call Kerala Homes: +91 75111 11000"
+                >
+                  <PhoneCall className="w-3.5 h-3.5 text-white" />
+                  <span>Call</span>
+                </a>
+              </div>
             </div>
           </ScrollReveal>
 
           {/* Division 3: Innovature Designs (Right Side Entrance) */}
           <ScrollReveal direction="right" delay={300}>
-            <div className="bg-white border border-[#E0C0B2] rounded-xl p-7 flex flex-col items-center text-center shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all duration-300 relative group md:scale-95 hover-lift">
+            <div className="bg-white border border-[#E0C0B2] hover:border-[#355E3B] rounded-2xl p-8 flex flex-col items-center text-center shadow-xl hover:-translate-y-2 transition-all duration-300 relative group hover-lift h-full">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full hidden md:block w-[2px] h-4 bg-[#355E3B]"></div>
-              <div className="w-full h-28 flex items-center justify-center mb-4 overflow-visible p-1">
+              <div className="w-full h-32 flex items-center justify-center mb-4 overflow-visible p-2">
                 <img
                   src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785737271/bg_nsnrga.png"
                   alt="Innovature Designs Logo"
-                  className="max-h-full max-w-full object-contain transform scale-100 drop-shadow-sm"
+                  className="max-h-full max-w-full object-contain transform scale-105 drop-shadow-sm"
                 />
               </div>
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-gray-500 mb-2 bg-gray-100 px-3 py-1 rounded-full">
@@ -132,12 +152,22 @@ export default function BrandTree() {
               <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-6 flex-grow">
                 Architectural masterpieces crafted with artistic vision, 3D spatial modeling, and sustainable interior design tailored for luxury living.
               </p>
-              <Link
-                href="/services#innovature"
-                className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest border-b-2 border-[#355E3B]/30 pb-1 hover:border-[#355E3B] transition-colors"
-              >
-                Explore Studio <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="w-full flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                <Link
+                  href="/services#innovature"
+                  className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest border-b-2 border-[#355E3B]/30 pb-1 hover:border-[#355E3B] transition-colors"
+                >
+                  Explore Studio <ArrowRight className="w-4 h-4" />
+                </Link>
+                <a
+                  href="tel:+918921955878"
+                  className="inline-flex items-center gap-1.5 bg-[#355E3B] hover:bg-[#2B4C30] text-white px-3.5 py-1.5 rounded-full text-xs font-bold shadow-md transition-all hover:scale-105 active:scale-95 shrink-0"
+                  title="Call Innovature Designs: +91 89219 55878"
+                >
+                  <PhoneCall className="w-3.5 h-3.5 text-white" />
+                  <span>Call</span>
+                </a>
+              </div>
             </div>
           </ScrollReveal>
         </div>

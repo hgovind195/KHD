@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Building, Award, Users, CheckCircle2, ShieldAlert, Layers, MapPin, ChevronLeft, ChevronRight, Maximize2, X, Compass, PenTool, Hammer, Key } from "lucide-react";
+import { ArrowRight, Building, Award, Users, CheckCircle2, ShieldAlert, Layers, MapPin, ChevronLeft, ChevronRight, Maximize2, X, Compass, PenTool, Hammer, Key, PhoneCall } from "lucide-react";
 import BrandTree from "@/components/BrandTree";
 import QuoteModal from "@/components/QuoteModal";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -63,6 +63,72 @@ export default function HomePage() {
     } else {
       setActiveGalleryIndex((prev) => (prev < galleryImages.length - 1 ? prev + 1 : 0));
     }
+  };
+
+  // Touch and Mouse Swipe/Drag Gesture Handlers
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragDistance, setDragDistance] = useState(0);
+
+  const minSwipeDistance = 40;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEndX(null);
+    setTouchStartX(e.targetTouches[0].clientX);
+    setDragDistance(0);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStartX !== null) {
+      const currentX = e.targetTouches[0].clientX;
+      setTouchEndX(currentX);
+      setDragDistance(touchStartX - currentX);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX !== null && touchEndX !== null) {
+      const distance = touchStartX - touchEndX;
+      if (distance > minSwipeDistance) {
+        scrollGallery("right");
+      } else if (distance < -minSwipeDistance) {
+        scrollGallery("left");
+      }
+    }
+    setTouchStartX(null);
+    setTouchEndX(null);
+    setTimeout(() => setDragDistance(0), 50);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setTouchEndX(null);
+    setTouchStartX(e.clientX);
+    setIsDragging(true);
+    setDragDistance(0);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (isDragging && touchStartX !== null) {
+      const currentX = e.clientX;
+      setTouchEndX(currentX);
+      setDragDistance(touchStartX - currentX);
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (isDragging && touchStartX !== null && touchEndX !== null) {
+      const distance = touchStartX - touchEndX;
+      if (distance > minSwipeDistance) {
+        scrollGallery("right");
+      } else if (distance < -minSwipeDistance) {
+        scrollGallery("left");
+      }
+    }
+    setIsDragging(false);
+    setTouchStartX(null);
+    setTouchEndX(null);
+    setTimeout(() => setDragDistance(0), 50);
   };
 
   const projects = [
@@ -146,7 +212,7 @@ export default function HomePage() {
           className="absolute inset-0 z-0 bg-cover bg-center opacity-40 transform scale-105 transition-transform duration-10000"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=80')",
+              "url('https://res.cloudinary.com/w1tsvtbe/image/upload/v1787673057/ChatGPT_Image_Aug_25_2026_08_17_21_PM_bejzbi.png')",
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#1B1C1C] via-[#1B1C1C]/80 to-transparent z-0"></div>
@@ -158,8 +224,8 @@ export default function HomePage() {
               Official Corporate Portal • Kerala Homes & Developers
             </div>
 
-            <h1 className="font-extrabold text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white leading-[1.08] font-headline">
-              WE BUILD <span className="text-[#355E3B] transition-colors hover:text-[#42764a]">YOUR FUTURE</span>
+            <h1 className="font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white leading-[1.08] font-playfair">
+              We Build <span className="text-[#355E3B] font-extrabold transition-colors hover:text-[#42764a]">Your Home</span>
             </h1>
 
             <p className="text-gray-300 text-base md:text-xl max-w-2xl font-body leading-relaxed">
@@ -405,8 +471,17 @@ export default function HomePage() {
               <ChevronRight className="w-8 h-8" />
             </button>
 
-            {/* Sliding 3-Slot Stage with Fixed DOM Slots */}
-            <div className="flex items-center justify-center gap-4 md:gap-8 w-full max-w-6xl overflow-hidden px-8">
+            {/* Sliding 3-Slot Stage with Swipe & Mouse Drag Support */}
+            <div
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
+              className="flex items-center justify-center gap-4 md:gap-8 w-full max-w-6xl overflow-hidden px-8 select-none cursor-grab active:cursor-grabbing touch-pan-y"
+            >
               {(() => {
                 const total = galleryImages.length;
                 const prevIdx = (activeGalleryIndex - 1 + total) % total;
@@ -427,22 +502,25 @@ export default function HomePage() {
                     <div
                       key={`slot-${slot.position}`}
                       onClick={() => {
+                        if (Math.abs(dragDistance) > 10) return;
                         if (!isCenter) {
                           setActiveGalleryIndex(slot.originalIdx);
                         }
                       }}
-                      className={`transition-all duration-500 cursor-pointer rounded-2xl overflow-hidden border shrink-0 ${isCenter
-                        ? "w-[300px] sm:w-[380px] md:w-[420px] scale-100 z-30 shadow-[0_25px_60px_rgba(53,94,59,0.45)] border-4 border-[#355E3B] ring-4 ring-[#355E3B]/30 bg-[#2A2B2B]"
-                        : "hidden md:block w-48 lg:w-64 scale-85 opacity-35 z-10 border-gray-800 bg-[#2A2B2B]/60 hover:opacity-75 hover:scale-90"
-                        }`}
+                      className={`transition-all duration-500 cursor-pointer rounded-2xl overflow-hidden border shrink-0 ${
+                        isCenter
+                          ? "w-[300px] sm:w-[380px] md:w-[420px] scale-100 z-30 shadow-[0_25px_60px_rgba(53,94,59,0.45)] border-4 border-[#355E3B] ring-4 ring-[#355E3B]/30 bg-[#2A2B2B]"
+                          : "hidden md:block w-48 lg:w-64 scale-85 opacity-35 z-10 border-gray-800 bg-[#2A2B2B]/60 hover:opacity-75 hover:scale-90"
+                      }`}
                     >
                       <div className="relative h-64 md:h-80 overflow-hidden">
                         <img
                           key={`img-${img.id}`}
                           src={img.src}
                           alt={img.title}
+                          draggable={false}
                           style={{ objectPosition: (img as any).objectPosition || "center center" }}
-                          className="w-full h-full object-cover transition-opacity duration-500 animate-fadeIn"
+                          className="w-full h-full object-cover transition-opacity duration-500 animate-fadeIn pointer-events-none"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                         <span className="absolute top-3 left-3 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded shadow-md">
@@ -451,6 +529,7 @@ export default function HomePage() {
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
+                            if (Math.abs(dragDistance) > 10) return;
                             setSelectedGalleryImage(img.src);
                           }}
                           className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
@@ -461,8 +540,9 @@ export default function HomePage() {
 
                       <div className="p-5 text-center">
                         <h4
-                          className={`font-extrabold uppercase transition-colors ${isCenter ? "text-lg text-[#355E3B]" : "text-xs text-gray-400"
-                            }`}
+                          className={`font-extrabold uppercase transition-colors ${
+                            isCenter ? "text-lg text-[#355E3B]" : "text-xs text-gray-400"
+                          }`}
                         >
                           {img.title}
                         </h4>
@@ -475,6 +555,22 @@ export default function HomePage() {
                 });
               })()}
             </div>
+          </div>
+
+          {/* Carousel Pagination Dots */}
+          <div className="flex items-center justify-center gap-2 mt-6">
+            {galleryImages.map((img, idx) => (
+              <button
+                key={`dot-${img.id}`}
+                onClick={() => setActiveGalleryIndex(idx)}
+                className={`transition-all duration-300 rounded-full ${
+                  idx === activeGalleryIndex
+                    ? "w-8 h-2.5 bg-[#355E3B]"
+                    : "w-2.5 h-2.5 bg-gray-600 hover:bg-gray-400"
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>

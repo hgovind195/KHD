@@ -28,6 +28,18 @@
   font-family: "Century Gothic", CenturyGothic, AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
 }
 
+.font-playfair {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel), serif;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
 .hero-gradient {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.85));
 }
