@@ -56,7 +56,7 @@ export default function BrandTree() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-7xl mx-auto mt-6">
           {/* Division 2: Master Plan Engineering (Left Side Entrance) */}
           <ScrollReveal direction="left" delay={100}>
-            <div className="bg-white border border-[#E0C0B2] hover:border-[#355E3B] rounded-2xl p-8 flex flex-col items-center text-center shadow-xl hover:-translate-y-2 transition-all duration-300 relative group hover-lift h-full">
+            <div className="bg-white border-2 border-[#355E3B] rounded-2xl p-8 flex flex-col items-center text-center shadow-xl hover:-translate-y-2 transition-all duration-300 relative group hover-lift h-full">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full hidden md:block w-[2px] h-4 bg-[#355E3B]"></div>
               <div className="w-full h-32 flex items-center justify-center mb-4 overflow-visible p-2">
                 <img
@@ -65,7 +65,7 @@ export default function BrandTree() {
                   className="max-h-full max-w-full object-contain transform scale-105 drop-shadow-sm"
                 />
               </div>
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-gray-500 mb-2 bg-gray-100 px-3 py-1 rounded-full">
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] mb-2 bg-[#355E3B]/10 px-3 py-1 rounded-full border border-[#355E3B]/20">
                 Engineering Consultancy
               </span>
               <h3 className="font-extrabold text-xl md:text-2xl text-[#1B1C1C] mb-3 uppercase">
@@ -134,7 +134,7 @@ export default function BrandTree() {
 
           {/* Division 3: Innovature Designs (Right Side Entrance) */}
           <ScrollReveal direction="right" delay={300}>
-            <div className="bg-white border border-[#E0C0B2] hover:border-[#355E3B] rounded-2xl p-8 flex flex-col items-center text-center shadow-xl hover:-translate-y-2 transition-all duration-300 relative group hover-lift h-full">
+            <div className="bg-white border-2 border-[#355E3B] rounded-2xl p-8 flex flex-col items-center text-center shadow-xl hover:-translate-y-2 transition-all duration-300 relative group hover-lift h-full">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full hidden md:block w-[2px] h-4 bg-[#355E3B]"></div>
               <div className="w-full h-32 flex items-center justify-center mb-4 overflow-visible p-2">
                 <img
@@ -143,7 +143,7 @@ export default function BrandTree() {
                   className="max-h-full max-w-full object-contain transform scale-105 drop-shadow-sm"
                 />
               </div>
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-gray-500 mb-2 bg-gray-100 px-3 py-1 rounded-full">
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] mb-2 bg-[#355E3B]/10 px-3 py-1 rounded-full border border-[#355E3B]/20">
                 Design Studio Division
               </span>
               <h3 className="font-extrabold text-xl md:text-2xl text-[#1B1C1C] mb-3 uppercase">

@@ -56,7 +56,7 @@ export default function ServicesPage() {
       title: "Innovature Architecture & Design consultants ",
       tagline: "The firm focuses on full architecture master planning,interior and retail design,as well as product and branding identity.",
       icon: PenTool,
-      badgeColor: "bg-[#1B1C1C]",
+      badgeColor: "bg-[#355E3B]",
       logo: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785737271/bg_nsnrga.png",
       features: [
         "Product & Branding Design",

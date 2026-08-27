@@ -44,7 +44,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "KERALA HOMES & DEVELOPERS PVT. LTD. | Building the Future",
   description:
-    "Official corporate site of Kerala Homes & Developers Pvt. Ltd. Leading builders in Kerala specializing in turnkey residential villas, commercial high-rises, master plan engineering consultancy, and architectural design.",
+    "Official corporate site of Kerala Homes & Developers Pvt. Ltd. Leading builder in Kerala specializing in turnkey residential villas, commercial high-rises, master plan engineering consultancy, and architectural design.",
   keywords: [
     "Kerala Homes",
     "Kerala Homes & Developers",

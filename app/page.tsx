@@ -32,7 +32,7 @@ export default function HomePage() {
       title: "Mr. Rahul",
       category: "🏠Residential Project — Kollam",
       description: "Total Area: 2,000 Sq. Ft. | Status: Completed (2023)",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785740983/mr_rahul_wihpih.png",
+      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787846301/mr_rahul_has4mk.webp",
     },
     {
       id: 3,
@@ -257,8 +257,8 @@ export default function HomePage() {
                 <span className="text-xs uppercase tracking-widest font-extrabold text-white bg-black/20 px-3 py-1 rounded-full border border-white/10">
                   Excellence Legacy
                 </span>
-                <h3 className="font-extrabold text-2xl text-white uppercase mt-4 mb-2">
-                  Leading Builders In Kerala
+                <h3 className="font-extrabold text-2xl text-white mt-4 mb-2">
+                  A Leading Builder In Kerala
                 </h3>
                 <p className="text-gray-200 text-xs leading-relaxed mb-6">
                   Trusted by thousands of home buyers, institutional developers, and government agencies.
@@ -507,11 +507,10 @@ export default function HomePage() {
                           setActiveGalleryIndex(slot.originalIdx);
                         }
                       }}
-                      className={`transition-all duration-500 cursor-pointer rounded-2xl overflow-hidden border shrink-0 ${
-                        isCenter
+                      className={`transition-all duration-500 cursor-pointer rounded-2xl overflow-hidden border shrink-0 ${isCenter
                           ? "w-[300px] sm:w-[380px] md:w-[420px] scale-100 z-30 shadow-[0_25px_60px_rgba(53,94,59,0.45)] border-4 border-[#355E3B] ring-4 ring-[#355E3B]/30 bg-[#2A2B2B]"
                           : "hidden md:block w-48 lg:w-64 scale-85 opacity-35 z-10 border-gray-800 bg-[#2A2B2B]/60 hover:opacity-75 hover:scale-90"
-                      }`}
+                        }`}
                     >
                       <div className="relative h-64 md:h-80 overflow-hidden">
                         <img
@@ -540,9 +539,8 @@ export default function HomePage() {
 
                       <div className="p-5 text-center">
                         <h4
-                          className={`font-extrabold uppercase transition-colors ${
-                            isCenter ? "text-lg text-[#355E3B]" : "text-xs text-gray-400"
-                          }`}
+                          className={`font-extrabold uppercase transition-colors ${isCenter ? "text-lg text-[#355E3B]" : "text-xs text-gray-400"
+                            }`}
                         >
                           {img.title}
                         </h4>
@@ -563,11 +561,10 @@ export default function HomePage() {
               <button
                 key={`dot-${img.id}`}
                 onClick={() => setActiveGalleryIndex(idx)}
-                className={`transition-all duration-300 rounded-full ${
-                  idx === activeGalleryIndex
+                className={`transition-all duration-300 rounded-full ${idx === activeGalleryIndex
                     ? "w-8 h-2.5 bg-[#355E3B]"
                     : "w-2.5 h-2.5 bg-gray-600 hover:bg-gray-400"
-                }`}
+                  }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}

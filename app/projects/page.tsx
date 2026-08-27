@@ -80,7 +80,7 @@ export default function ProjectsPage() {
       title: "Daniel Kutty M C's Residence",
       category: "Engineering Consultancy",
       division: "Kerala Homes & Master Plan Engineering",
-      location: "Pynamannu, Pathanamthitta",
+      location: " Mylapra, Pathanamthitta",
       year: "2024",
       status: "Completed",
       area: "7,000 sq.ft.",
@@ -107,25 +107,18 @@ export default function ProjectsPage() {
       description: "Bespoke hotel & luxury residency project featuring architectural master planning, high-end hospitality interiors, and state-of-the-art structural craftsmanship in Pathanamthitta.",
     },
     {
-      id: "proj-4",
-      title: "Mathew's Residence",
-      category: "Engineering Consultancy",
-      division: "Master Plan Engineering Consultancy",
-      location: "Vadasserikkara",
-      year: "2026",
-      status: "ONGOING",
-      area: "3,300 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786114982/ChatGPT_Image_Aug_7_2026_07_48_54_PM_bjki0f.png",
-      imagePosition: "object-top",
-      images: [
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786115053/ChatGPT_Image_Aug_7_2026_08_33_00_PM_pw8hxb.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785944236/str_ryf2lx.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786046186/ChatGPT_Image_Aug_7_2026_01_25_55_AM_fj2pcg.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786115614/ChatGPT_Image_Aug_7_2026_08_41_47_PM_b4egvu.png",
-
-      ],
-      description: "A modern tropical home featuring clean architectural lines, a spacious terrace, warm wooden accents, and lush greenery. The open carport and elegant façade create a stylish yet welcoming contemporary living space,Supervision on Structural engineering advisory.",
+      id: "proj-9",
+      title: "Raju's Residence",
+      category: "Construction",
+      division: "Kerala Homes",
+      location: "Mylapra, Pathanamthitta",
+      year: "2024",
+      status: "Completed (2024)",
+      area: "3300 sq.ft.",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
+      description: "Turnkey residential villa construction engineered with modern architectural aesthetics, premium structural foundation, and luxury interior woodwork in Mylapra.",
     },
+
     {
       id: "proj-5",
       title: "Wilson's Residence",
@@ -156,42 +149,47 @@ export default function ProjectsPage() {
       area: "3,500 sq.ft.",
       image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785874399/ChatGPT_Image_Aug_5_2026_01_41_33_AM_oj1flp.png",
       imagePosition: "object-center",
-      images: [
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785873195/ChatGPT_Image_Aug_5_2026_01_22_20_AM_e4mvoq.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785873750/ChatGPT_Image_Aug_5_2026_01_31_59_AM_epvlwn.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785874860/ChatGPT_Image_Aug_5_2026_01_50_23_AM_zotckk.png",
-      ],
       description: "Tailored to deliver modern comfort and timeless architecture, this custom residential project for Mr. Ginu reflects structural precision, functional spatial design, and premium craftsmanship from foundation to final handover.",
     },
     {
       id: "proj-7",
-      title: "Samkutty's Swimming Pool",
+      title: "Thomas Jacob's Residence",
       category: "Engineering Consultancy",
       division: "Master Plan Engineering",
-      location: "Mylapra, Pathanamthitta",
+      location: "THEKKUTHODU, Pathanamthitta",
       year: "2024",
-      status: "Completed (2025)",
-      area: "750 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786078954/ChatGPT_Image_Aug_7_2026_10_31_49_AM_bnhrsv.png",
+      status: "Ongoing",
+      area: "5,500 sq.ft.",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787838222/ChatGPT_Image_Aug_25_2026_08_13_40_PM_tt2hu0.png",
+      imagePosition: "object-center",
       images: [
         "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786047880/ChatGPT_Image_Aug_7_2026_01_52_24_AM_rngpsh.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786049031/ChatGPT_Image_Aug_7_2026_01_50_37_AM_offwd9.png",
         "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786048155/ChatGPT_Image_Aug_7_2026_01_58_20_AM_ypztgi.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786078954/ChatGPT_Image_Aug_7_2026_10_31_49_AM_bnhrsv.png",
       ],
-      description: "A refreshing and well-designed swimming pool offering a perfect space to relax, unwind, and enjoy quality time with family and friends.",
+      description: "A luxury 5,500 sq.ft. residential estate located in Thekkuthodu, Pathanamthitta, engineered with modern architectural aesthetics and structural elegance.",
     },
     {
-      id: "proj-9",
-      title: "Raju's Residence",
-      category: "Construction",
-      division: "Kerala Homes",
-      location: "Mylapra, Pathanamthitta",
-      year: "2024",
-      status: "Completed (2024)",
-      area: "3300 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
-      description: "Turnkey residential villa construction engineered with modern architectural aesthetics, premium structural foundation, and luxury interior woodwork in Mylapra.",
+      id: "proj-4",
+      title: "Mathew's Residence",
+      category: "Engineering Consultancy",
+      division: "Master Plan Engineering Consultancy",
+      location: "Vadasserikkara",
+      year: "2026",
+      status: "ONGOING",
+      area: "3,300 sq.ft.",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786114982/ChatGPT_Image_Aug_7_2026_07_48_54_PM_bjki0f.png",
+      imagePosition: "object-top",
+      images: [
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786115053/ChatGPT_Image_Aug_7_2026_08_33_00_PM_pw8hxb.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785944236/str_ryf2lx.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786046186/ChatGPT_Image_Aug_7_2026_01_25_55_AM_fj2pcg.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786115614/ChatGPT_Image_Aug_7_2026_08_41_47_PM_b4egvu.png",
+
+      ],
+      description: "A modern tropical home featuring clean architectural lines, a spacious terrace, warm wooden accents, and lush greenery. The open carport and elegant façade create a stylish yet welcoming contemporary living space,Supervision on Structural engineering advisory.",
     },
+
   ];
 
   const categories = ["All", "Construction", "Engineering Consultancy", "Designs & Drawings"];
@@ -266,7 +264,7 @@ export default function ProjectsPage() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full object-cover ${project.imagePosition || "object-top"} group-hover:scale-105 transition-transform duration-700`}
+                      className={`w-full h-full object-cover ${project.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-700`}
                     />
                     <div className="absolute top-3 left-3 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded shadow">
                       {project.category}
