@@ -607,7 +607,7 @@ export default function AboutPage() {
             </div>
             <div className="w-full h-full p-2 my-2 flex items-center justify-center overflow-auto">
               <img
-                src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png"
+                src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920913/0_n7q3yd.webp"
                 alt="Kerala Homes Company Incorporation Certificate"
                 className="max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
               />
@@ -615,7 +615,7 @@ export default function AboutPage() {
             <div className="pt-3 w-full flex justify-between items-center border-t border-gray-800">
               <span className="text-[11px] text-gray-400 font-medium">Ministry of Corporate Affairs — Govt. of India</span>
               <a
-                href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png"
+                href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920913/0_n7q3yd.webp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
