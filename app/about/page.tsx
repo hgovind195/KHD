@@ -22,11 +22,15 @@ import {
   Hammer,
   ArrowRight,
   Handshake,
+  X,
 } from "lucide-react";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function AboutPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
+  const [panDocModalOpen, setPanDocModalOpen] = useState(false);
+  const [incDocModalOpen, setIncDocModalOpen] = useState(false);
+  const [tanDocModalOpen, setTanDocModalOpen] = useState(false);
 
   const stats = [
     { number: "100+", label: "PROJECTS COMPLETED", icon: Building2 },
@@ -404,40 +408,137 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {/* Membership 1: BAI */}
-            <div className="bg-white border-2 border-[#355E3B]/30 rounded-2xl p-6 md:p-8 flex items-center gap-5 shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all">
-              <div className="w-14 h-14 bg-[#355E3B]/10 text-[#355E3B] rounded-xl flex items-center justify-center shrink-0 border border-[#355E3B]/20">
-                <Building2 className="w-7 h-7 text-[#355E3B]" />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] bg-[#355E3B]/10 px-2.5 py-0.5 rounded-full inline-block">
-                  Registered Member
-                </span>
-                <h3 className="font-extrabold text-lg md:text-xl text-[#1B1C1C] uppercase leading-tight">
-                  Member, Builders Association of India (BAI)
-                </h3>
-                <p className="text-gray-600 text-xs leading-relaxed">
-                  Affiliated with India’s premier national apex body of civil engineering & construction contractors.
-                </p>
+            <div className="bg-white border-2 border-[#355E3B]/30 rounded-2xl p-6 flex flex-col justify-between shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#355E3B]/10 text-[#355E3B] rounded-xl flex items-center justify-center shrink-0 border border-[#355E3B]/20">
+                  <Building2 className="w-6 h-6 text-[#355E3B]" />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] bg-[#355E3B]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    Registered Member
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    Member, Builders Association of India (BAI)
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Affiliated with India’s premier national apex body of civil engineering & construction contractors.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Membership 2: APCAD */}
-            <div className="bg-white border-2 border-[#D35400]/30 rounded-2xl p-6 md:p-8 flex items-center gap-5 shadow-lg hover:border-[#D35400] hover:-translate-y-1 transition-all">
-              <div className="w-14 h-14 bg-[#D35400]/10 text-[#D35400] rounded-xl flex items-center justify-center shrink-0 border border-[#D35400]/20">
-                <Award className="w-7 h-7 text-[#D35400]" />
+            <div className="bg-white border-2 border-[#D35400]/30 rounded-2xl p-6 flex flex-col justify-between shadow-lg hover:border-[#D35400] hover:-translate-y-1 transition-all space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#D35400]/10 text-[#D35400] rounded-xl flex items-center justify-center shrink-0 border border-[#D35400]/20">
+                  <Award className="w-6 h-6 text-[#D35400]" />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#D35400] bg-[#D35400]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    Registered Member
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    Member, Association of Private Contractors & Developers (APCAD)
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Promoting state-wide standards in safety, transparent execution, and technical excellence.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#D35400] bg-[#D35400]/10 px-2.5 py-0.5 rounded-full inline-block">
-                  Registered Member
-                </span>
-                <h3 className="font-extrabold text-lg md:text-xl text-[#1B1C1C] uppercase leading-tight">
-                  Member, Association of Private Contractors & Developers (APCAD)
-                </h3>
-                <p className="text-gray-600 text-xs leading-relaxed">
-                  Promoting state-wide standards in safety, transparent execution, and technical excellence.
-                </p>
+            </div>
+
+            {/* Credential 3: Company Incorporation Certificate */}
+            <div className="bg-white border-2 border-[#355E3B]/30 rounded-2xl p-6 flex flex-col justify-between shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#355E3B]/10 text-[#355E3B] rounded-xl flex items-center justify-center shrink-0 border border-[#355E3B]/20">
+                  <ShieldCheck className="w-6 h-6 text-[#355E3B]" />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] bg-[#355E3B]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    Corporate License
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    Company Incorporation Certificate
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Official Certificate of Incorporation under Companies Act, Ministry of Corporate Affairs, Govt. of India.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-gray-100 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => setIncDocModalOpen(true)}
+                  className="inline-flex items-center gap-2 text-[#355E3B] hover:text-[#2B4C30] text-xs font-extrabold uppercase tracking-wider transition-colors group"
+                >
+                  <Eye className="w-4 h-4 text-[#355E3B] group-hover:scale-110 transition-transform" />
+                  <span className="underline underline-offset-4 decoration-[#355E3B]/40 group-hover:decoration-[#355E3B]">View the Document</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Credential 4: Company PAN Card */}
+            <div className="bg-white border-2 border-[#1B1C1C]/30 rounded-2xl p-6 flex flex-col justify-between shadow-lg hover:border-[#1B1C1C] hover:-translate-y-1 transition-all space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#1B1C1C]/10 text-[#1B1C1C] rounded-xl flex items-center justify-center shrink-0 border border-[#1B1C1C]/20">
+                  <FileCheck className="w-6 h-6 text-[#1B1C1C]" />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#1B1C1C] bg-[#1B1C1C]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    Statutory Registration
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    Company PAN Card
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Registered corporate Permanent Account Number (PAN) issued by Income Tax Department, Govt. of India.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-gray-100 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => setPanDocModalOpen(true)}
+                  className="inline-flex items-center gap-2 text-[#355E3B] hover:text-[#2B4C30] text-xs font-extrabold uppercase tracking-wider transition-colors group"
+                >
+                  <Eye className="w-4 h-4 text-[#355E3B] group-hover:scale-110 transition-transform" />
+                  <span className="underline underline-offset-4 decoration-[#355E3B]/40 group-hover:decoration-[#355E3B]">View the Document</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Credential 5: Company TAN Number */}
+            <div className="bg-white border-2 border-[#D35400]/30 rounded-2xl p-6 flex flex-col justify-between shadow-lg hover:border-[#D35400] hover:-translate-y-1 transition-all space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#D35400]/10 text-[#D35400] rounded-xl flex items-center justify-center shrink-0 border border-[#D35400]/20">
+                  <FileCheck className="w-6 h-6 text-[#D35400]" />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#D35400] bg-[#D35400]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    Tax Registration
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    Company TAN Number
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Official Tax Deduction and Collection Account Number (TAN) allotment letter from Income Tax Dept., Govt. of India.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-gray-100 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => setTanDocModalOpen(true)}
+                  className="inline-flex items-center gap-2 text-[#355E3B] hover:text-[#2B4C30] text-xs font-extrabold uppercase tracking-wider transition-colors group"
+                >
+                  <Eye className="w-4 h-4 text-[#355E3B] group-hover:scale-110 transition-transform" />
+                  <span className="underline underline-offset-4 decoration-[#355E3B]/40 group-hover:decoration-[#355E3B]">View the Document</span>
+                </button>
               </div>
             </div>
           </div>
@@ -486,6 +587,123 @@ export default function AboutPage() {
           </button>
         </div>
       </section>
+
+      {/* Incorporation Certificate Lightbox Modal */}
+      {incDocModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
+          <div className="relative max-w-3xl max-h-[90vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-5 shadow-2xl flex flex-col items-center">
+            <div className="w-full flex items-center justify-between pb-3 border-b border-gray-800">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#355E3B]" />
+                Official Company Incorporation Certificate
+              </span>
+              <button
+                onClick={() => setIncDocModalOpen(false)}
+                className="p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                aria-label="Close document modal"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="w-full h-full p-2 my-2 flex items-center justify-center overflow-auto">
+              <img
+                src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png"
+                alt="Kerala Homes Company Incorporation Certificate"
+                className="max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
+              />
+            </div>
+            <div className="pt-3 w-full flex justify-between items-center border-t border-gray-800">
+              <span className="text-[11px] text-gray-400 font-medium">Ministry of Corporate Affairs — Govt. of India</span>
+              <a
+                href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
+              >
+                Open Original File ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* PAN Card Lightbox Modal */}
+      {panDocModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
+          <div className="relative max-w-3xl max-h-[90vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-5 shadow-2xl flex flex-col items-center">
+            <div className="w-full flex items-center justify-between pb-3 border-b border-gray-800">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-2">
+                <FileCheck className="w-4 h-4 text-[#355E3B]" />
+                Official Company PAN Card Document
+              </span>
+              <button
+                onClick={() => setPanDocModalOpen(false)}
+                className="p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                aria-label="Close document modal"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="w-full h-full p-2 my-2 flex items-center justify-center overflow-auto">
+              <img
+                src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                alt="Kerala Homes Company PAN Card Document"
+                className="max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
+              />
+            </div>
+            <div className="pt-3 w-full flex justify-between items-center border-t border-gray-800">
+              <span className="text-[11px] text-gray-400 font-medium">Income Tax Department — Govt. of India</span>
+              <a
+                href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
+              >
+                Open Original File ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* TAN Number Lightbox Modal */}
+      {tanDocModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
+          <div className="relative max-w-3xl max-h-[90vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-5 shadow-2xl flex flex-col items-center">
+            <div className="w-full flex items-center justify-between pb-3 border-b border-gray-800">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-2">
+                <FileCheck className="w-4 h-4 text-[#D35400]" />
+                Official Company TAN Allotment Document
+              </span>
+              <button
+                onClick={() => setTanDocModalOpen(false)}
+                className="p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                aria-label="Close document modal"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="w-full h-full p-2 my-2 flex items-center justify-center overflow-auto">
+              <img
+                src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787921511/TAN_NUMBER_rz2myh.jpg"
+                alt="Kerala Homes Company TAN Allotment Document"
+                className="max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
+              />
+            </div>
+            <div className="pt-3 w-full flex justify-between items-center border-t border-gray-800">
+              <span className="text-[11px] text-gray-400 font-medium">Income Tax Department — Govt. of India</span>
+              <a
+                href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787921511/TAN_NUMBER_rz2myh.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
+              >
+                Open Original File ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       <QuoteModal isOpen={quoteModalOpen} onClose={() => setQuoteModalOpen(false)} />
     </div>

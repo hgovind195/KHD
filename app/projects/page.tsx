@@ -85,6 +85,12 @@ export default function ProjectsPage() {
       status: "Completed",
       area: "7,000 sq.ft.",
       image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787837715/ChatGPT_Image_Aug_27_2026_07_03_47_PM_gw9xto.png",
+      images: [
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787849758/ChatGPT_Image_Aug_27_2026_10_23_13_PM_qw8tyg.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787851005/ChatGPT_Image_Aug_27_2026_10_43_54_PM_lps2hu.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787850645/ChatGPT_Image_Aug_27_2026_10_32_47_PM_drvxnh.png",
+
+      ],
       description: "Luxury 7,000 sq.ft. residential estate featuring architectural grandeur, custom structural planning, and modern spatial design.",
     },
     {
@@ -116,6 +122,13 @@ export default function ProjectsPage() {
       status: "Completed (2024)",
       area: "3300 sq.ft.",
       image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
+      imagePosition: "object-center",
+      images: [
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787849758/ChatGPT_Image_Aug_27_2026_10_20_32_PM_wnddqf.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920203/ChatGPT_Image_Aug_28_2026_05_59_37_PM_omsapx.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920241/ChatGPT_Image_Aug_28_2026_05_57_39_PM_gvdwtp.png",
+      ],
       description: "Turnkey residential villa construction engineered with modern architectural aesthetics, premium structural foundation, and luxury interior woodwork in Mylapra.",
     },
 
@@ -264,7 +277,7 @@ export default function ProjectsPage() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full object-cover ${project.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-700`}
+                      className={`w-full h-full ${project.imagePosition === "object-contain" ? "object-contain bg-[#141515] p-2" : `object-cover ${project.imagePosition || "object-center"}`} group-hover:scale-105 transition-transform duration-700`}
                     />
                     <div className="absolute top-3 left-3 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded shadow">
                       {project.category}
