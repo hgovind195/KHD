@@ -52,29 +52,29 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-      <div className="relative w-full max-w-xl bg-white border border-[#E0C0B2] shadow-2xl rounded-2xl overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm animate-fadeIn overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-white border border-[#E0C0B2] shadow-2xl rounded-2xl overflow-hidden max-h-[92vh] flex flex-col my-auto">
         {/* Header */}
-        <div className="bg-[#1B1C1C] text-white p-6 border-b-4 border-[#355E3B] flex justify-between items-center">
+        <div className="bg-[#1B1C1C] text-white p-4 sm:p-6 border-b-4 border-[#355E3B] flex justify-between items-center shrink-0">
           <div>
-            <span className="text-[#355E3B] text-xs font-bold uppercase tracking-widest block">
+            <span className="text-[#355E3B] text-[10px] sm:text-xs font-bold uppercase tracking-widest block">
               Kerala Homes & Developers
             </span>
-            <h3 className="text-xl md:text-2xl font-extrabold uppercase font-headline">
+            <h3 className="text-lg sm:text-2xl font-extrabold uppercase font-headline leading-tight">
               Request a Project Quote
             </h3>
           </div>
           <button
             onClick={onClose}
-            className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-colors"
+            className="p-1.5 sm:p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-colors shrink-0"
             aria-label="Close modal"
           >
-            <X className="w-6 h-6" />
+            <X className="w-5 sm:w-6 h-5 sm:h-6" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="p-6 md:p-8 max-h-[80vh] overflow-y-auto">
+        <div className="p-4 sm:p-8 overflow-y-auto">
           {submitted ? (
             <div className="py-12 flex flex-col items-center justify-center text-center space-y-4">
               <CheckCircle2 className="w-16 h-16 text-[#25D366] animate-bounce" />

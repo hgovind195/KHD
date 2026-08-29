@@ -590,35 +590,35 @@ export default function AboutPage() {
 
       {/* Incorporation Certificate Lightbox Modal */}
       {incDocModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
-          <div className="relative max-w-3xl max-h-[90vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-5 shadow-2xl flex flex-col items-center">
-            <div className="w-full flex items-center justify-between pb-3 border-b border-gray-800">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#355E3B]" />
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn overflow-y-auto">
+          <div className="relative max-w-[95vw] sm:max-w-3xl max-h-[92vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-3.5 sm:p-5 shadow-2xl flex flex-col items-center justify-between my-auto">
+            <div className="w-full flex items-center justify-between pb-2.5 sm:pb-3 border-b border-gray-800 shrink-0">
+              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-1.5 sm:gap-2 leading-tight">
+                <ShieldCheck className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#355E3B] shrink-0" />
                 Official Company Incorporation Certificate
               </span>
               <button
                 onClick={() => setIncDocModalOpen(false)}
-                className="p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                className="p-1 sm:p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors shrink-0"
                 aria-label="Close document modal"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 sm:w-5 h-4 sm:h-5" />
               </button>
             </div>
-            <div className="w-full h-full p-2 my-2 flex items-center justify-center overflow-auto">
+            <div className="w-full h-full p-1.5 my-2 flex items-center justify-center overflow-auto">
               <img
                 src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920913/0_n7q3yd.webp"
                 alt="Kerala Homes Company Incorporation Certificate"
-                className="max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
+                className="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
               />
             </div>
-            <div className="pt-3 w-full flex justify-between items-center border-t border-gray-800">
-              <span className="text-[11px] text-gray-400 font-medium">Ministry of Corporate Affairs — Govt. of India</span>
+            <div className="pt-2.5 sm:pt-3 w-full flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 gap-1.5 sm:gap-0 shrink-0">
+              <span className="text-[10px] sm:text-[11px] text-gray-400 font-medium text-center sm:text-left">Ministry of Corporate Affairs — Govt. of India</span>
               <a
                 href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920913/0_n7q3yd.webp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
+                className="text-[11px] sm:text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
               >
                 Open Original File ↗
               </a>
@@ -629,35 +629,35 @@ export default function AboutPage() {
 
       {/* PAN Card Lightbox Modal */}
       {panDocModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
-          <div className="relative max-w-3xl max-h-[90vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-5 shadow-2xl flex flex-col items-center">
-            <div className="w-full flex items-center justify-between pb-3 border-b border-gray-800">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-2">
-                <FileCheck className="w-4 h-4 text-[#355E3B]" />
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn overflow-y-auto">
+          <div className="relative max-w-[95vw] sm:max-w-3xl max-h-[92vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-3.5 sm:p-5 shadow-2xl flex flex-col items-center justify-between my-auto">
+            <div className="w-full flex items-center justify-between pb-2.5 sm:pb-3 border-b border-gray-800 shrink-0">
+              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-1.5 sm:gap-2 leading-tight">
+                <FileCheck className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#355E3B] shrink-0" />
                 Official Company PAN Card Document
               </span>
               <button
                 onClick={() => setPanDocModalOpen(false)}
-                className="p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                className="p-1 sm:p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors shrink-0"
                 aria-label="Close document modal"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 sm:w-5 h-4 sm:h-5" />
               </button>
             </div>
-            <div className="w-full h-full p-2 my-2 flex items-center justify-center overflow-auto">
+            <div className="w-full h-full p-1.5 my-2 flex items-center justify-center overflow-auto">
               <img
                 src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
                 alt="Kerala Homes Company PAN Card Document"
-                className="max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
+                className="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
               />
             </div>
-            <div className="pt-3 w-full flex justify-between items-center border-t border-gray-800">
-              <span className="text-[11px] text-gray-400 font-medium">Income Tax Department — Govt. of India</span>
+            <div className="pt-2.5 sm:pt-3 w-full flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 gap-1.5 sm:gap-0 shrink-0">
+              <span className="text-[10px] sm:text-[11px] text-gray-400 font-medium text-center sm:text-left">Income Tax Department — Govt. of India</span>
               <a
                 href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
+                className="text-[11px] sm:text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
               >
                 Open Original File ↗
               </a>
@@ -668,35 +668,35 @@ export default function AboutPage() {
 
       {/* TAN Number Lightbox Modal */}
       {tanDocModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
-          <div className="relative max-w-3xl max-h-[90vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-5 shadow-2xl flex flex-col items-center">
-            <div className="w-full flex items-center justify-between pb-3 border-b border-gray-800">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-2">
-                <FileCheck className="w-4 h-4 text-[#D35400]" />
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn overflow-y-auto">
+          <div className="relative max-w-[95vw] sm:max-w-3xl max-h-[92vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-3.5 sm:p-5 shadow-2xl flex flex-col items-center justify-between my-auto">
+            <div className="w-full flex items-center justify-between pb-2.5 sm:pb-3 border-b border-gray-800 shrink-0">
+              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-1.5 sm:gap-2 leading-tight">
+                <FileCheck className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#D35400] shrink-0" />
                 Official Company TAN Allotment Document
               </span>
               <button
                 onClick={() => setTanDocModalOpen(false)}
-                className="p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                className="p-1 sm:p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors shrink-0"
                 aria-label="Close document modal"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 sm:w-5 h-4 sm:h-5" />
               </button>
             </div>
-            <div className="w-full h-full p-2 my-2 flex items-center justify-center overflow-auto">
+            <div className="w-full h-full p-1.5 my-2 flex items-center justify-center overflow-auto">
               <img
                 src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787921511/TAN_NUMBER_rz2myh.jpg"
                 alt="Kerala Homes Company TAN Allotment Document"
-                className="max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
+                className="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
               />
             </div>
-            <div className="pt-3 w-full flex justify-between items-center border-t border-gray-800">
-              <span className="text-[11px] text-gray-400 font-medium">Income Tax Department — Govt. of India</span>
+            <div className="pt-2.5 sm:pt-3 w-full flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 gap-1.5 sm:gap-0 shrink-0">
+              <span className="text-[10px] sm:text-[11px] text-gray-400 font-medium text-center sm:text-left">Income Tax Department — Govt. of India</span>
               <a
                 href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787921511/TAN_NUMBER_rz2myh.jpg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
+                className="text-[11px] sm:text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
               >
                 Open Original File ↗
               </a>

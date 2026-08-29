@@ -49,19 +49,19 @@ export default function Navbar() {
         </div>
 
         {/* Main Navbar */}
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 py-2.5 sm:py-3.5 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink">
             <img
               src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1785851706/font_tp_pinjpz.png"
               alt="Kerala Homes Logo"
-              className="h-12 md:h-15 lg:h-18 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-sm"
+              className="h-9 sm:h-12 md:h-15 lg:h-18 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-sm shrink-0"
             />
             <div className="flex flex-col justify-center">
-              <span className="font-extrabold text-lg md:text-xl lg:text-2xl leading-tight tracking-tight text-[#1B1C1C] group-hover:text-[#355E3B] transition-colors font-headline">
+              <span className="font-extrabold text-sm sm:text-base md:text-xl lg:text-2xl leading-tight tracking-tight text-[#1B1C1C] group-hover:text-[#355E3B] transition-colors font-headline">
                 Kerala Homes &amp;
               </span>
-              <span className="font-bold text-xs md:text-sm lg:text-base leading-tight tracking-normal text-[#2A2B2B] group-hover:text-[#355E3B] transition-colors">
+              <span className="font-bold text-[10px] sm:text-xs md:text-sm lg:text-base leading-tight tracking-normal text-[#2A2B2B] group-hover:text-[#355E3B] transition-colors">
                 Developers Pvt. Ltd.
               </span>
             </div>
@@ -88,15 +88,15 @@ export default function Navbar() {
           </nav>
 
           {/* CTA & Mobile trigger */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <div className="relative">
               <button
                 type="button"
                 onClick={() => setContactOptionsOpen(!contactOptionsOpen)}
-                className="inline-flex items-center gap-1.5 bg-[#1B1C1C] hover:bg-[#2A2B2B] text-white px-4 py-2.5 rounded font-bold uppercase text-xs tracking-widest shadow-md hover:shadow-lg transition-all active:scale-95 border border-white/10"
+                className="inline-flex items-center gap-1 sm:gap-1.5 bg-[#1B1C1C] hover:bg-[#2A2B2B] text-white px-2.5 sm:px-4 py-2 sm:py-2.5 rounded font-bold uppercase text-[10px] sm:text-xs tracking-wider sm:tracking-widest shadow-md hover:shadow-lg transition-all active:scale-95 border border-white/10"
                 title="Call or WhatsApp Kerala Homes"
               >
-                <PhoneCall className="w-3.5 h-3.5 text-[#355E3B]" />
+                <PhoneCall className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#355E3B]" />
                 <span>Call / Chat</span>
               </button>
 
@@ -107,7 +107,7 @@ export default function Navbar() {
                     className="fixed inset-0 z-40"
                     onClick={() => setContactOptionsOpen(false)}
                   ></div>
-                  <div className="absolute right-0 mt-2 w-64 bg-white border border-[#E0C0B2] rounded-xl shadow-2xl p-3 z-50 animate-fadeIn space-y-2">
+                  <div className="absolute right-0 mt-2 w-60 sm:w-64 max-w-[calc(100vw-1.5rem)] bg-white border border-[#E0C0B2] rounded-xl shadow-2xl p-3 z-50 animate-fadeIn space-y-2">
                     <div className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] px-2 pt-1">
                       Connect With Kerala Homes
                     </div>
