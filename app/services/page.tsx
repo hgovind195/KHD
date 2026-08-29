@@ -16,7 +16,7 @@ export default function ServicesPage() {
       tagline: "End-to-end building solutions from foundation to luxury/budget key handover.",
       icon: Building,
       badgeColor: "bg-[#355E3B]",
-      logo: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785851706/font_tp_pinjpz.png",
+      logo: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785851706/font_tp_pinjpz.png",
       features: [
         "Custom Luxury Villa Construction & Gated Communities",
         "Multi-Story High-Rise Residential Apartments",
