@@ -546,7 +546,7 @@ export default function AboutPage() {
       </section>
 
       {/* History Milestones */}
-      <section className="py-20 px-4 md:px-8 bg-[#1B1C1C] text-white">
+      <section className="py-20 px-4 md:px-8 bg-[#1B1C1C] text-white overflow-hidden w-full max-w-full">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-[#355E3B] font-bold text-xs uppercase tracking-widest block mb-2">

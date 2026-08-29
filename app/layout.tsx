@@ -69,15 +69,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${workSans.variable} ${playfair.variable} ${cinzel.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${workSans.variable} ${playfair.variable} ${cinzel.variable} ${cormorant.variable} h-full antialiased overflow-x-hidden max-w-full w-full`}
     >
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#F7FAF3] text-[#1B1C1C]">
+      <body className="min-h-full flex flex-col bg-[#F7FAF3] text-[#1B1C1C] overflow-x-hidden max-w-full w-full relative">
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow w-full max-w-full overflow-x-hidden relative">{children}</main>
         <Footer />
       </body>
     </html>

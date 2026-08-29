@@ -42,18 +42,28 @@ export default function ScrollReveal({
     };
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const getTransform = () => {
     if (isVisible) return "translate(0, 0)";
+    if (isMobile) return "translateY(24px)";
     switch (direction) {
       case "left":
-        return "translateX(-60px)";
+        return "translateX(-40px)";
       case "right":
-        return "translateX(60px)";
+        return "translateX(40px)";
       case "down":
-        return "translateY(-40px)";
+        return "translateY(-30px)";
       case "up":
       default:
-        return "translateY(40px)";
+        return "translateY(30px)";
     }
   };
 
@@ -66,7 +76,7 @@ export default function ScrollReveal({
         transition: `opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
         willChange: "opacity, transform",
       }}
-      className={className}
+      className={`max-w-full overflow-hidden ${className}`}
     >
       {children}
     </div>
