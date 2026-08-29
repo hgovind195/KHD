@@ -3,9 +3,11 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight, Building, Award, Users, CheckCircle2, ShieldAlert, Layers, MapPin, ChevronLeft, ChevronRight, Maximize2, X, Compass, PenTool, Hammer, Key, PhoneCall } from "lucide-react";
+import dynamic from "next/dynamic";
 import BrandTree from "@/components/BrandTree";
-import QuoteModal from "@/components/QuoteModal";
 import ScrollReveal from "@/components/ScrollReveal";
+
+const QuoteModal = dynamic(() => import("@/components/QuoteModal"), { ssr: false });
 
 export default function HomePage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);

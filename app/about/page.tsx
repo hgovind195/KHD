@@ -24,7 +24,9 @@ import {
   Handshake,
   X,
 } from "lucide-react";
-import QuoteModal from "@/components/QuoteModal";
+import dynamic from "next/dynamic";
+
+const QuoteModal = dynamic(() => import("@/components/QuoteModal"), { ssr: false });
 
 export default function AboutPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);

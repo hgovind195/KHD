@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import { MapPin, Building, Calendar, Layers, ArrowRight, Filter, ChevronLeft, ChevronRight } from "lucide-react";
-import QuoteModal from "@/components/QuoteModal";
+import dynamic from "next/dynamic";
+
+const QuoteModal = dynamic(() => import("@/components/QuoteModal"), { ssr: false });
 
 interface ProjectItem {
   id: string;

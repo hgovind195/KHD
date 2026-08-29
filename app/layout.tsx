@@ -7,37 +7,37 @@ import Footer from "@/components/Footer";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700", "800"],
   display: "swap",
 });
 
 const workSans = Work_Sans({
   subsets: ["latin"],
   variable: "--font-work-sans",
-  weight: ["400", "500", "600"],
+  weight: ["400", "600"],
   display: "swap",
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
-  weight: ["400", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
+  weight: ["400", "700", "800"],
+  style: ["normal"],
   display: "swap",
 });
 
 const cinzel = Cinzel({
   subsets: ["latin"],
   variable: "--font-cinzel",
-  weight: ["400", "600", "700", "800", "900"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
-  weight: ["400", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "700"],
+  style: ["normal"],
   display: "swap",
 });
 
@@ -74,6 +74,12 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link
+          rel="preload"
+          as="image"
+          href="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_1600/v1787673057/ChatGPT_Image_Aug_25_2026_08_17_21_PM_bejzbi.png"
+          fetchPriority="high"
+        />
       </head>
       <body className="min-h-full flex flex-col bg-[#F7FAF3] text-[#1B1C1C] overflow-x-hidden max-w-full w-full relative">
         <Navbar />

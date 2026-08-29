@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 import { Building, Compass, PenTool, CheckCircle2, ArrowRight, ShieldCheck, Cpu, HardHat, FileText, PhoneCall } from "lucide-react";
-import QuoteModal from "@/components/QuoteModal";
+import dynamic from "next/dynamic";
+
+const QuoteModal = dynamic(() => import("@/components/QuoteModal"), { ssr: false });
 
 export default function ServicesPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);

@@ -4,7 +4,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, PhoneCall, Building2, ChevronRight, MessageSquare } from "lucide-react";
-import QuoteModal from "./QuoteModal";
+import dynamic from "next/dynamic";
+
+const QuoteModal = dynamic(() => import("./QuoteModal"), { ssr: false });
 
 const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
