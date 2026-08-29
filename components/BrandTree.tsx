@@ -62,6 +62,7 @@ export default function BrandTree() {
                 <img
                   src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785736185/Screenshot_2026-08-01_092139_magic_timyra.png"
                   alt="Master Plan Engineering Consultancy Logo"
+                  loading="lazy"
                   className="max-h-full max-w-full object-contain transform scale-105 drop-shadow-sm"
                 />
               </div>
@@ -99,8 +100,9 @@ export default function BrandTree() {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full hidden md:block w-[2px] h-5 bg-[#355E3B]"></div>
               <div className="w-full h-36 flex items-center justify-center mb-4 overflow-visible p-2">
                 <img
-                  src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785851706/font_tp_pinjpz.png"
+                  src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785851706/font_tp_pinjpz.png"
                   alt="Kerala Homes & Developers Logo"
+                  loading="lazy"
                   className="max-h-full max-w-full object-contain transform scale-115 drop-shadow-sm"
                 />
               </div>
@@ -140,6 +142,7 @@ export default function BrandTree() {
                 <img
                   src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785737271/bg_nsnrga.png"
                   alt="Innovature Designs Logo"
+                  loading="lazy"
                   className="max-h-full max-w-full object-contain transform scale-105 drop-shadow-sm"
                 />
               </div>

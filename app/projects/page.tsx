@@ -60,7 +60,7 @@ export default function ProjectsPage() {
       year: "2022",
       status: "Completed (2022)",
       area: "12,000 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785766841/ChatGPT_Image_Aug_3_2026_03_22_26_PM_i9ho2y.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785766841/ChatGPT_Image_Aug_3_2026_03_22_26_PM_i9ho2y.png",
       description: "An inspiring, functional learning space crafted to support contemporary teaching and student development.",
     },
     {
@@ -72,7 +72,7 @@ export default function ProjectsPage() {
       year: "ONGOING",
       status: "ONGOING",
       area: "3500 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785768604/mathew_idondi.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785768604/mathew_idondi.png",
       description: "An elite 1.35 Crore residential project blending sophisticated architecture, premium finishes, and opulent design for modern luxury living.",
     },
     {
@@ -84,11 +84,11 @@ export default function ProjectsPage() {
       year: "2024",
       status: "Completed",
       area: "7,000 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787837715/ChatGPT_Image_Aug_27_2026_07_03_47_PM_gw9xto.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787837715/ChatGPT_Image_Aug_27_2026_07_03_47_PM_gw9xto.png",
       images: [
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787849758/ChatGPT_Image_Aug_27_2026_10_23_13_PM_qw8tyg.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787851005/ChatGPT_Image_Aug_27_2026_10_43_54_PM_lps2hu.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787850645/ChatGPT_Image_Aug_27_2026_10_32_47_PM_drvxnh.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787849758/ChatGPT_Image_Aug_27_2026_10_23_13_PM_qw8tyg.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787851005/ChatGPT_Image_Aug_27_2026_10_43_54_PM_lps2hu.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787850645/ChatGPT_Image_Aug_27_2026_10_32_47_PM_drvxnh.png",
 
       ],
       description: "Luxury 7,000 sq.ft. residential estate featuring architectural grandeur, custom structural planning, and modern spatial design.",
@@ -102,13 +102,13 @@ export default function ProjectsPage() {
       year: "2023",
       status: "Completed (2023)",
       area: "15,500 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785871315/innov_t5ry4b.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785871315/innov_t5ry4b.png",
       images: [
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785870848/ChatGPT_Image_Aug_5_2026_12_42_57_AM_chy8pc.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785871315/innov_t5ry4b.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785872137/ChatGPT_Image_Aug_5_2026_01_03_06_AM_ma3d9p.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785872413/ChatGPT_Image_Aug_5_2026_01_09_13_AM_ew0oag.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785872832/fr_h8lujz.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785870848/ChatGPT_Image_Aug_5_2026_12_42_57_AM_chy8pc.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785871315/innov_t5ry4b.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785872137/ChatGPT_Image_Aug_5_2026_01_03_06_AM_ma3d9p.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785872413/ChatGPT_Image_Aug_5_2026_01_09_13_AM_ew0oag.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785872832/fr_h8lujz.png",
       ],
       description: "Bespoke hotel & luxury residency project featuring architectural master planning, high-end hospitality interiors, and state-of-the-art structural craftsmanship in Pathanamthitta.",
     },
@@ -121,13 +121,13 @@ export default function ProjectsPage() {
       year: "2024",
       status: "Completed (2024)",
       area: "3300 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
       imagePosition: "object-center",
       images: [
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787849758/ChatGPT_Image_Aug_27_2026_10_20_32_PM_wnddqf.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787920203/ChatGPT_Image_Aug_28_2026_05_59_37_PM_omsapx.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787920241/ChatGPT_Image_Aug_28_2026_05_57_39_PM_gvdwtp.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787849758/ChatGPT_Image_Aug_27_2026_10_20_32_PM_wnddqf.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787920203/ChatGPT_Image_Aug_28_2026_05_59_37_PM_omsapx.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787920241/ChatGPT_Image_Aug_28_2026_05_57_39_PM_gvdwtp.png",
       ],
       description: "Turnkey residential villa construction engineered with modern architectural aesthetics, premium structural foundation, and luxury interior woodwork in Mylapra.",
     },
@@ -141,13 +141,13 @@ export default function ProjectsPage() {
       year: "2025",
       status: "Completed (2025)",
       area: "4,500 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786042201/ChatGPT_Image_Aug_7_2026_12_18_22_AM_az0ubx.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786042201/ChatGPT_Image_Aug_7_2026_12_18_22_AM_az0ubx.png",
       images: [
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786078952/ChatGPT_Image_Aug_7_2026_10_31_31_AM_gfb4nr.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786043420/ChatGPT_Image_Aug_7_2026_12_39_07_AM_ya27ww.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786043728/ChatGPT_Image_Aug_7_2026_12_43_53_AM_le5fcl.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786044969/ChatGPT_Image_Aug_7_2026_01_05_49_AM_mfmktz.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786045229/ChatGPT_Image_Aug_7_2026_01_10_12_AM_ivcw58.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786078952/ChatGPT_Image_Aug_7_2026_10_31_31_AM_gfb4nr.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786043420/ChatGPT_Image_Aug_7_2026_12_39_07_AM_ya27ww.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786043728/ChatGPT_Image_Aug_7_2026_12_43_53_AM_le5fcl.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786044969/ChatGPT_Image_Aug_7_2026_01_05_49_AM_mfmktz.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786045229/ChatGPT_Image_Aug_7_2026_01_10_12_AM_ivcw58.png",
       ],
       description: "Complete interior spatial design, custom teakwood woodwork, indoor central courtyard water feature, and acoustic ceiling treatment.",
     },
@@ -160,7 +160,7 @@ export default function ProjectsPage() {
       year: "2023",
       status: "Completed (2023)",
       area: "3,500 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785874399/ChatGPT_Image_Aug_5_2026_01_41_33_AM_oj1flp.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785874399/ChatGPT_Image_Aug_5_2026_01_41_33_AM_oj1flp.png",
       imagePosition: "object-center",
       description: "Tailored to deliver modern comfort and timeless architecture, this custom residential project for Mr. Ginu reflects structural precision, functional spatial design, and premium craftsmanship from foundation to final handover.",
     },
@@ -173,12 +173,12 @@ export default function ProjectsPage() {
       year: "2024",
       status: "Ongoing",
       area: "5,500 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787838222/ChatGPT_Image_Aug_25_2026_08_13_40_PM_tt2hu0.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787838222/ChatGPT_Image_Aug_25_2026_08_13_40_PM_tt2hu0.png",
       imagePosition: "object-center",
       images: [
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786047880/ChatGPT_Image_Aug_7_2026_01_52_24_AM_rngpsh.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786048155/ChatGPT_Image_Aug_7_2026_01_58_20_AM_ypztgi.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786078954/ChatGPT_Image_Aug_7_2026_10_31_49_AM_bnhrsv.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786047880/ChatGPT_Image_Aug_7_2026_01_52_24_AM_rngpsh.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786048155/ChatGPT_Image_Aug_7_2026_01_58_20_AM_ypztgi.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786078954/ChatGPT_Image_Aug_7_2026_10_31_49_AM_bnhrsv.png",
       ],
       description: "A luxury 5,500 sq.ft. residential estate located in Thekkuthodu, Pathanamthitta, engineered with modern architectural aesthetics and structural elegance.",
     },
@@ -191,13 +191,13 @@ export default function ProjectsPage() {
       year: "2026",
       status: "ONGOING",
       area: "3,300 sq.ft.",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786114982/ChatGPT_Image_Aug_7_2026_07_48_54_PM_bjki0f.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786114982/ChatGPT_Image_Aug_7_2026_07_48_54_PM_bjki0f.png",
       imagePosition: "object-top",
       images: [
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786115053/ChatGPT_Image_Aug_7_2026_08_33_00_PM_pw8hxb.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785944236/str_ryf2lx.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786046186/ChatGPT_Image_Aug_7_2026_01_25_55_AM_fj2pcg.png",
-        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1786115614/ChatGPT_Image_Aug_7_2026_08_41_47_PM_b4egvu.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786115053/ChatGPT_Image_Aug_7_2026_08_33_00_PM_pw8hxb.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785944236/str_ryf2lx.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786046186/ChatGPT_Image_Aug_7_2026_01_25_55_AM_fj2pcg.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786115614/ChatGPT_Image_Aug_7_2026_08_41_47_PM_b4egvu.png",
 
       ],
       description: "A modern tropical home featuring clean architectural lines, a spacious terrace, warm wooden accents, and lush greenery. The open carport and elegant façade create a stylish yet welcoming contemporary living space,Supervision on Structural engineering advisory.",
@@ -277,6 +277,7 @@ export default function ProjectsPage() {
                     <img
                       src={project.image}
                       alt={project.title}
+                      loading="lazy"
                       className={`w-full h-full ${project.imagePosition === "object-contain" ? "object-contain bg-[#141515] p-2" : `object-cover ${project.imagePosition || "object-center"}`} group-hover:scale-105 transition-transform duration-700`}
                     />
                     <div className="absolute top-3 left-3 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded shadow">
@@ -307,7 +308,7 @@ export default function ProjectsPage() {
                           className="w-12 h-9 rounded overflow-hidden border-2 border-white hover:border-[#355E3B] shrink-0 transition-all shadow-sm focus:outline-none"
                           title={`View image ${i + 1}`}
                         >
-                          <img src={imgUrl} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
+                          <img src={imgUrl.replace('w_800', 'w_200')} alt={`Thumbnail ${i + 1}`} loading="lazy" className="w-full h-full object-cover" />
                         </button>
                       ))}
                     </div>
@@ -378,8 +379,9 @@ export default function ProjectsPage() {
                 <div className="relative h-72 sm:h-96 md:h-[460px] bg-[#0D0E0E] overflow-hidden shrink-0 flex items-center justify-center">
                   <img
                     key={currentImg}
-                    src={currentImg}
+                    src={currentImg.replace('w_800', 'w_1200')}
                     alt={selectedProject.title}
+                    loading="lazy"
                     className="w-full h-full object-cover object-center transition-all duration-300 animate-fadeIn"
                   />
                   {/* Subtle top & bottom gradient overlays */}

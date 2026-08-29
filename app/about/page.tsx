@@ -110,7 +110,7 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 transition-transform duration-10000 z-0"
           style={{
-            backgroundImage: "url('https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,a_-90/v1786125408/We_Design_Homes_from_Sketch_to_Stunning_Kerala_Villas_kckkev.jpg')",
+            backgroundImage: "url('https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_1600,a_-90/v1786125408/We_Design_Homes_from_Sketch_to_Stunning_Kerala_Villas_kckkev.jpg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/50 backdrop-blur-[2px] z-0"></div>
@@ -319,8 +319,9 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-14 h-12 bg-white p-1.5 rounded-lg flex items-center justify-center shrink-0 border border-gray-200">
                     <img
-                      src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1785851706/font_tp_pinjpz.png"
+                      src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_400/v1785851706/font_tp_pinjpz.png"
                       alt="Kerala Homes"
+                      loading="lazy"
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>
@@ -607,15 +608,16 @@ export default function AboutPage() {
             </div>
             <div className="w-full h-full p-1.5 my-2 flex items-center justify-center overflow-auto">
               <img
-                src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787920913/0_n7q3yd.webp"
+                src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_1200/v1787920913/0_n7q3yd.webp"
                 alt="Kerala Homes Company Incorporation Certificate"
+                loading="lazy"
                 className="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
               />
             </div>
             <div className="pt-2.5 sm:pt-3 w-full flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 gap-1.5 sm:gap-0 shrink-0">
               <span className="text-[10px] sm:text-[11px] text-gray-400 font-medium text-center sm:text-left">Ministry of Corporate Affairs — Govt. of India</span>
               <a
-                href="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787920913/0_n7q3yd.webp"
+                href="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_1200/v1787920913/0_n7q3yd.webp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[11px] sm:text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
@@ -646,15 +648,16 @@ export default function AboutPage() {
             </div>
             <div className="w-full h-full p-1.5 my-2 flex items-center justify-center overflow-auto">
               <img
-                src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_1200/v1787920041/COMPANY_PAN_oxgxhy.jpg"
                 alt="Kerala Homes Company PAN Card Document"
+                loading="lazy"
                 className="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
               />
             </div>
             <div className="pt-2.5 sm:pt-3 w-full flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 gap-1.5 sm:gap-0 shrink-0">
               <span className="text-[10px] sm:text-[11px] text-gray-400 font-medium text-center sm:text-left">Income Tax Department — Govt. of India</span>
               <a
-                href="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                href="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_1200/v1787920041/COMPANY_PAN_oxgxhy.jpg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[11px] sm:text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
@@ -685,15 +688,16 @@ export default function AboutPage() {
             </div>
             <div className="w-full h-full p-1.5 my-2 flex items-center justify-center overflow-auto">
               <img
-                src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787921511/TAN_NUMBER_rz2myh.jpg"
+                src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_1200/v1787921511/TAN_NUMBER_rz2myh.jpg"
                 alt="Kerala Homes Company TAN Allotment Document"
+                loading="lazy"
                 className="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
               />
             </div>
             <div className="pt-2.5 sm:pt-3 w-full flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 gap-1.5 sm:gap-0 shrink-0">
               <span className="text-[10px] sm:text-[11px] text-gray-400 font-medium text-center sm:text-left">Income Tax Department — Govt. of India</span>
               <a
-                href="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto/v1787921511/TAN_NUMBER_rz2myh.jpg"
+                href="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_1200/v1787921511/TAN_NUMBER_rz2myh.jpg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[11px] sm:text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1"
