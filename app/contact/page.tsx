@@ -123,15 +123,31 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-[#D35400]" />
                 </div>
                 <div>
-                  <h4 className="font-extrabold text-sm uppercase text-[#1B1C1C] mb-1">
+                  <h4 className="font-extrabold text-sm uppercase text-[#1B1C1C] mb-1.5">
                     Email Desks
                   </h4>
-                  <p className="text-gray-600 text-xs leading-relaxed">
-                    Inquiries: info@keralahomes.com <br />
-                    Engineering: masterplan@keralahomes.com <br />
-                    Construction: keralahomes0001@gmail.com<br />
-                    Architecture: innovaturedesignsstudio@gmail.com
-                  </p>
+                  <div className="space-y-1 text-gray-600 text-xs leading-relaxed">
+                    <div>
+                      <span className="font-semibold text-[#1B1C1C]">Mail: </span>
+                      <a href="mailto:sagar@keralahomes.co.in" className="hover:text-[#355E3B] transition-colors">sagar@keralahomes.co.in</a>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[#1B1C1C]">HR Desk: </span>
+                      <a href="mailto:hr@keralahomes.co.in" className="hover:text-[#355E3B] transition-colors">hr@keralahomes.co.in</a>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[#1B1C1C]">Engineering: </span>
+                      <a href="mailto:engineer@keralahomes.co.in" className="hover:text-[#355E3B] transition-colors">engineer@keralahomes.co.in</a>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[#1B1C1C]">Architecture: </span>
+                      <a href="mailto:architect@keralahomes.co.in" className="hover:text-[#355E3B] transition-colors">architect@keralahomes.co.in</a>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[#1B1C1C]">General: </span>
+                      <a href="mailto:mail@keralahomes.co.in" className="hover:text-[#355E3B] transition-colors">mail@keralahomes.co.in</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 

@@ -120,7 +120,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="w-4 h-4 text-[#D35400] shrink-0" />
-              <a href="mailto:info@keralahomes.com" className="hover:text-white transition-colors">info@keralahomes.com</a>
+              <a href="mailto:sagar@keralahomes.co.in" className="hover:text-white transition-colors">sagar@keralahomes.co.in</a>
             </li>
           </ul>
         </div>
