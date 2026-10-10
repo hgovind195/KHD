@@ -51,7 +51,7 @@ export default function ContactPage() {
             CONTACT <span className="text-[#355E3B]">KERALA HOMES</span>
           </h1>
           <p className="text-gray-300 text-base md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Reach out to our corporate headquarters or schedule a face-to-face consultation at our Pathanamthitta registered office.
+            Reach out to our corporate headquarters or schedule a face-to-face consultation at our Pathanamthitta registered office or Kochi branch.
           </p>
         </div>
       </section>
@@ -63,26 +63,44 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-8">
             <div>
               <span className="text-[#355E3B] font-bold text-xs uppercase tracking-widest block mb-2">
-                Corporate Headquarters
+                Offices &amp; Branches
               </span>
               <h2 className="font-extrabold text-3xl uppercase text-[#1B1C1C] font-headline">
-                Kerala Homes & Developers Pvt. Ltd.
+                Kerala Homes &amp; Developers Pvt. Ltd.
               </h2>
             </div>
 
             <div className="space-y-6">
+              {/* Registered Office (Pathanamthitta) */}
               <div className="bg-white p-6 rounded-xl border border-[#E0C0B2] shadow-sm hover:shadow-md transition-all hover-lift flex items-start gap-4">
                 <div className="w-12 h-12 bg-[#355E3B]/10 text-[#355E3B] rounded-xl flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6 text-[#D35400]" />
                 </div>
                 <div>
                   <h4 className="font-extrabold text-sm uppercase text-[#1B1C1C] mb-1">
-                    Registered Office Address
+                    Registered Office (Pathanamthitta)
                   </h4>
                   <p className="text-gray-600 text-xs leading-relaxed">
                     Silver Tower, Opposite Private Bus Stand,<br />
                     Pathanamthitta, Kerala - 689645, India
                   </p>
+                </div>
+              </div>
+
+              {/* Kochi Branch Office */}
+              <div className="bg-white p-6 rounded-xl border border-[#E0C0B2] shadow-sm hover:shadow-md transition-all hover-lift flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#355E3B]/10 text-[#355E3B] rounded-xl flex items-center justify-center shrink-0">
+                  <Building className="w-6 h-6 text-[#355E3B]" />
+                </div>
+                <div>
+                  <h4 className="font-extrabold text-sm uppercase text-[#1B1C1C] mb-1">
+                    Kochi Branch Office
+                  </h4>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Ground Floor, 61/3100, Manikath Road, Ravipuram,<br />
+                    Kochi M.G. Road, Ernakulam, Kerala - 682016, India
+                  </p>
+
                 </div>
               </div>
 
@@ -252,7 +270,7 @@ export default function ContactPage() {
           <div className="w-full h-96 md:h-[480px] bg-gray-200 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative border border-gray-300">
             <iframe
               title="Kerala Homes & Developers Pvt. Ltd. Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.738575700607!2d76.78775587475148!3d9.267637485208404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0615100817464b%3A0xc0bfb1795f9859b5!2sKerala%20Homes%20%26%20Developers%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1786177599643!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d811.5879578394891!2d76.78964584478976!3d9.2674267128159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMTYnMDIuNyJOIDc2wrA0NycyMi43IkU!5e0!3m2!1sen!2sin!4v1791626638273!5m2!1sen!2sin"
               className="w-full h-full border-0"
               allowFullScreen
               loading="lazy"

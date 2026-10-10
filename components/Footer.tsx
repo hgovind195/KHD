@@ -86,25 +86,41 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Col 4: Registered Office */}
+        {/* Col 4: Our Offices */}
         <div>
           <h4 className="text-sm font-bold uppercase tracking-widest text-[#D35400] mb-4">
-            Registered Office
+            Our Offices
           </h4>
-          <ul className="space-y-3 text-xs text-gray-300">
-            <li className="flex items-start gap-3">
+          <ul className="space-y-3.5 text-xs text-gray-300">
+            <li className="flex items-start gap-2.5">
               <MapPin className="w-4 h-4 text-[#D35400] shrink-0 mt-0.5" />
-              <span>
-                Silver Tower, Opposite Private Bus Stand, Pathanamthitta, Kerala - 689645
-              </span>
+              <div>
+                <span className="text-white font-bold block text-[11px] uppercase tracking-wide">
+                  Registered Office (Pathanamthitta)
+                </span>
+                <span className="text-gray-300">
+                  Silver Tower, Opp. Private Bus Stand, Pathanamthitta, Kerala - 689645
+                </span>
+              </div>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-start gap-2.5">
+              <MapPin className="w-4 h-4 text-[#355E3B] shrink-0 mt-0.5" />
+              <div>
+                <span className="text-white font-bold block text-[11px] uppercase tracking-wide">
+                  Kochi Branch
+                </span>
+                <span className="text-gray-300">
+                  Ground Floor, 61/3100, Manikath Road, Ravipuram, Kochi M.G. Road, Ernakulam, Kerala - 682016
+                </span>
+              </div>
+            </li>
+            <li className="flex items-center gap-2.5 pt-1 border-t border-gray-800">
               <Phone className="w-4 h-4 text-[#D35400] shrink-0" />
-              <a href="tel:+917511111000" className="hover:text-white">+91 75111 11000</a>
+              <a href="tel:+917511111000" className="hover:text-white transition-colors">+91 75111 11000</a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-2.5">
               <Mail className="w-4 h-4 text-[#D35400] shrink-0" />
-              <a href="mailto:info@keralahomes.com" className="hover:text-white">info@keralahomes.com</a>
+              <a href="mailto:info@keralahomes.com" className="hover:text-white transition-colors">info@keralahomes.com</a>
             </li>
           </ul>
         </div>

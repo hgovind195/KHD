@@ -2,9 +2,7 @@
 
 import React, { useState } from "react";
 import { Building, Compass, PenTool, CheckCircle2, ArrowRight, ShieldCheck, Cpu, HardHat, FileText, PhoneCall } from "lucide-react";
-import dynamic from "next/dynamic";
-
-const QuoteModal = dynamic(() => import("@/components/QuoteModal"), { ssr: false });
+import QuoteModal from "@/components/QuoteModal";
 
 export default function ServicesPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
@@ -18,7 +16,7 @@ export default function ServicesPage() {
       tagline: "End-to-end building solutions from foundation to luxury/budget key handover.",
       icon: Building,
       badgeColor: "bg-[#355E3B]",
-      logo: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785851706/font_tp_pinjpz.png",
+      logo: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785851706/font_tp_pinjpz.png",
       features: [
         "Custom Luxury Villa Construction & Gated Communities",
         "Multi-Story High-Rise Residential Apartments",
@@ -58,7 +56,7 @@ export default function ServicesPage() {
       title: "Innovature Architecture & Design consultants ",
       tagline: "The firm focuses on full architecture master planning,interior and retail design,as well as product and branding identity.",
       icon: PenTool,
-      badgeColor: "bg-[#355E3B]",
+      badgeColor: "bg-[#1B1C1C]",
       logo: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785737271/bg_nsnrga.png",
       features: [
         "Product & Branding Design",
@@ -193,7 +191,6 @@ export default function ServicesPage() {
                         <img
                           src={service.logo}
                           alt={`${service.division} Logo`}
-                          loading="lazy"
                           className="max-h-full max-w-full object-contain drop-shadow-sm"
                         />
                       ) : (

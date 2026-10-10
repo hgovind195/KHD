@@ -2,12 +2,10 @@
 
 import React, { useState, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Building, Award, Users, CheckCircle2, ShieldAlert, Layers, MapPin, ChevronLeft, ChevronRight, Maximize2, X, Compass, PenTool, Hammer, Key, PhoneCall } from "lucide-react";
-import dynamic from "next/dynamic";
+import { ArrowRight, Building, Award, Users, CheckCircle2, ShieldAlert, Layers, MapPin, ChevronLeft, ChevronRight, Maximize2, X, Compass, PenTool, Hammer, Key } from "lucide-react";
 import BrandTree from "@/components/BrandTree";
+import QuoteModal from "@/components/QuoteModal";
 import ScrollReveal from "@/components/ScrollReveal";
-
-const QuoteModal = dynamic(() => import("@/components/QuoteModal"), { ssr: false });
 
 export default function HomePage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
@@ -20,34 +18,34 @@ export default function HomePage() {
       title: "Mr. Joseph Nechikadan (Universal College, Principal)",
       category: "🏛️ Educational Project — Pathanamthitta",
       description: "Total Area: 12,000 Sq. Ft. | Status: Completed (2022)",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785867721/univer_eallrd.png",
+      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785867721/univer_eallrd.png",
     },
     {
       id: 1,
       title: "Mrs. Ancy Shibu",
       category: "🏠 Residential Project-Perunad",
       description: "Built Area: 1,500 sq. Ft | Year of Completion: 2025",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785749779/ChatGPT_Image_Aug_3_2026_02_58_25_PM_y0bplz.png",
+      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785749779/ChatGPT_Image_Aug_3_2026_02_58_25_PM_y0bplz.png",
     },
     {
       id: 2,
       title: "Mr. Rahul",
       category: "🏠Residential Project — Kollam",
       description: "Total Area: 2,000 Sq. Ft. | Status: Completed (2023)",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1787846301/mr_rahul_has4mk.webp",
+      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785740983/mr_rahul_wihpih.png",
     },
     {
       id: 3,
       title: "Mr. Sasi Kumar",
       category: "🏠 Residential Project — Aranmula",
       description: "Total Area: 1,500 Sq. Ft. | Status: Completed (2024)",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785743374/mr_sasi_kumar_hzl1bj.png",
+      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785743374/mr_sasi_kumar_hzl1bj.png",
     },
     {
       id: 4,
       title: "Mr. Manu Mohan",
       category: "🏠Residential Project — Mavelikkara",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785745641/manu_mmohan_lbty9s.png",
+      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785745641/manu_mmohan_lbty9s.png",
       objectPosition: "center 15%",
     },
     {
@@ -55,7 +53,7 @@ export default function HomePage() {
       title: "Mr. Jalaludheen",
       category: "🏠 Residential Project — Pathanamthitta",
       description: "4 BHK | Total Area: 2,000 Sq. Ft |Status: Completed (2025)",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785744265/name_xkrpa5.png",
+      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785744265/name_xkrpa5.png",
     },
   ]);
 
@@ -67,79 +65,13 @@ export default function HomePage() {
     }
   };
 
-  // Touch and Mouse Swipe/Drag Gesture Handlers
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragDistance, setDragDistance] = useState(0);
-
-  const minSwipeDistance = 40;
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchEndX(null);
-    setTouchStartX(e.targetTouches[0].clientX);
-    setDragDistance(0);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (touchStartX !== null) {
-      const currentX = e.targetTouches[0].clientX;
-      setTouchEndX(currentX);
-      setDragDistance(touchStartX - currentX);
-    }
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStartX !== null && touchEndX !== null) {
-      const distance = touchStartX - touchEndX;
-      if (distance > minSwipeDistance) {
-        scrollGallery("right");
-      } else if (distance < -minSwipeDistance) {
-        scrollGallery("left");
-      }
-    }
-    setTouchStartX(null);
-    setTouchEndX(null);
-    setTimeout(() => setDragDistance(0), 50);
-  };
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setTouchEndX(null);
-    setTouchStartX(e.clientX);
-    setIsDragging(true);
-    setDragDistance(0);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (isDragging && touchStartX !== null) {
-      const currentX = e.clientX;
-      setTouchEndX(currentX);
-      setDragDistance(touchStartX - currentX);
-    }
-  };
-
-  const handleMouseUp = () => {
-    if (isDragging && touchStartX !== null && touchEndX !== null) {
-      const distance = touchStartX - touchEndX;
-      if (distance > minSwipeDistance) {
-        scrollGallery("right");
-      } else if (distance < -minSwipeDistance) {
-        scrollGallery("left");
-      }
-    }
-    setIsDragging(false);
-    setTouchStartX(null);
-    setTouchEndX(null);
-    setTimeout(() => setDragDistance(0), 50);
-  };
-
   const projects = [
     {
       id: "high-rise",
       title: "Universal College Educational Campus",
       category: "Construction",
       location: "Collectorate, Pathanamthitta, Kerala",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785766841/ChatGPT_Image_Aug_3_2026_03_22_26_PM_i9ho2y.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785766841/ChatGPT_Image_Aug_3_2026_03_22_26_PM_i9ho2y.png",
       area: "12,000 sq.ft.",
       units: "An inspiring, functional learning space crafted to support contemporary teaching and student development.",
     },
@@ -148,7 +80,7 @@ export default function HomePage() {
       title: "Wilson's Residence",
       category: "Interior",
       location: "Tiruvalla, Pathanamthitta",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786078952/ChatGPT_Image_Aug_7_2026_10_31_31_AM_gfb4nr.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786078952/ChatGPT_Image_Aug_7_2026_10_31_31_AM_gfb4nr.png",
       area: "4,500 sq.ft.",
       units: "Complete interior spatial design, custom teakwood woodwork & central courtyard feature.",
     },
@@ -157,7 +89,7 @@ export default function HomePage() {
       title: "Mathew's Residence",
       category: "Infrastructure",
       location: "Vadasserikkara, Pathanamthitta",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1786114982/ChatGPT_Image_Aug_7_2026_07_48_54_PM_bjki0f.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786114982/ChatGPT_Image_Aug_7_2026_07_48_54_PM_bjki0f.png",
       area: "3,300 sq.ft.",
       units: "Supervision on Structural engineering advisory by Master Plan Consultancy.",
     },
@@ -166,7 +98,7 @@ export default function HomePage() {
       title: "Hotel 24inn residency",
       category: "Commercial & Interior",
       location: "Pathanamthitta, Kerala",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_800/v1785870848/ChatGPT_Image_Aug_5_2026_12_42_57_AM_chy8pc.png",
+      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785870848/ChatGPT_Image_Aug_5_2026_12_42_57_AM_chy8pc.png",
       area: "15,500 sq.ft.",
       units: "Bespoke hotel & luxury residency project featuring architectural master planning.",
     },
@@ -214,7 +146,7 @@ export default function HomePage() {
           className="absolute inset-0 z-0 bg-cover bg-center opacity-40 transform scale-105 transition-transform duration-10000"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_1600/v1787673057/ChatGPT_Image_Aug_25_2026_08_17_21_PM_bejzbi.png')",
+              "url('https://res.cloudinary.com/w1tsvtbe/image/upload/v1787673057/ChatGPT_Image_Aug_25_2026_08_17_21_PM_bejzbi.png')",
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#1B1C1C] via-[#1B1C1C]/80 to-transparent z-0"></div>
@@ -226,8 +158,8 @@ export default function HomePage() {
               Official Corporate Portal • Kerala Homes & Developers
             </div>
 
-            <h1 className="font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white leading-[1.08] font-playfair">
-              We Build <span className="text-[#355E3B] font-extrabold transition-colors hover:text-[#42764a]">Your Home</span>
+            <h1 className="font-extrabold text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white leading-[1.08] font-headline">
+              WE BUILD <span className="text-[#355E3B] transition-colors hover:text-[#42764a]">YOUR FUTURE</span>
             </h1>
 
             <p className="text-gray-300 text-base md:text-xl max-w-2xl font-body leading-relaxed">
@@ -259,8 +191,8 @@ export default function HomePage() {
                 <span className="text-xs uppercase tracking-widest font-extrabold text-white bg-black/20 px-3 py-1 rounded-full border border-white/10">
                   Excellence Legacy
                 </span>
-                <h3 className="font-extrabold text-2xl text-white mt-4 mb-2">
-                  A Leading Builder In Kerala
+                <h3 className="font-extrabold text-2xl text-white uppercase mt-4 mb-2">
+                  Leading Builders In Kerala
                 </h3>
                 <p className="text-gray-200 text-xs leading-relaxed mb-6">
                   Trusted by thousands of home buyers, institutional developers, and government agencies.
@@ -473,17 +405,8 @@ export default function HomePage() {
               <ChevronRight className="w-8 h-8" />
             </button>
 
-            {/* Sliding 3-Slot Stage with Swipe & Mouse Drag Support */}
-            <div
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseUp}
-              className="flex items-center justify-center gap-4 md:gap-8 w-full max-w-6xl overflow-hidden px-8 select-none cursor-grab active:cursor-grabbing touch-pan-y"
-            >
+            {/* Sliding 3-Slot Stage with Fixed DOM Slots */}
+            <div className="flex items-center justify-center gap-4 md:gap-8 w-full max-w-6xl overflow-hidden px-8">
               {(() => {
                 const total = galleryImages.length;
                 const prevIdx = (activeGalleryIndex - 1 + total) % total;
@@ -504,14 +427,13 @@ export default function HomePage() {
                     <div
                       key={`slot-${slot.position}`}
                       onClick={() => {
-                        if (Math.abs(dragDistance) > 10) return;
                         if (!isCenter) {
                           setActiveGalleryIndex(slot.originalIdx);
                         }
                       }}
                       className={`transition-all duration-500 cursor-pointer rounded-2xl overflow-hidden border shrink-0 ${isCenter
-                          ? "w-[calc(100vw-3rem)] max-w-[340px] sm:max-w-none sm:w-[380px] md:w-[420px] scale-100 z-30 shadow-[0_25px_60px_rgba(53,94,59,0.45)] border-4 border-[#355E3B] ring-4 ring-[#355E3B]/30 bg-[#2A2B2B]"
-                          : "hidden md:block w-48 lg:w-64 scale-85 opacity-35 z-10 border-gray-800 bg-[#2A2B2B]/60 hover:opacity-75 hover:scale-90"
+                        ? "w-[300px] sm:w-[380px] md:w-[420px] scale-100 z-30 shadow-[0_25px_60px_rgba(53,94,59,0.45)] border-4 border-[#355E3B] ring-4 ring-[#355E3B]/30 bg-[#2A2B2B]"
+                        : "hidden md:block w-48 lg:w-64 scale-85 opacity-35 z-10 border-gray-800 bg-[#2A2B2B]/60 hover:opacity-75 hover:scale-90"
                         }`}
                     >
                       <div className="relative h-64 md:h-80 overflow-hidden">
@@ -519,10 +441,8 @@ export default function HomePage() {
                           key={`img-${img.id}`}
                           src={img.src}
                           alt={img.title}
-                          loading="lazy"
-                          draggable={false}
                           style={{ objectPosition: (img as any).objectPosition || "center center" }}
-                          className="w-full h-full object-cover transition-opacity duration-500 animate-fadeIn pointer-events-none"
+                          className="w-full h-full object-cover transition-opacity duration-500 animate-fadeIn"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                         <span className="absolute top-3 left-3 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded shadow-md">
@@ -531,7 +451,6 @@ export default function HomePage() {
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
-                            if (Math.abs(dragDistance) > 10) return;
                             setSelectedGalleryImage(img.src);
                           }}
                           className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
@@ -556,21 +475,6 @@ export default function HomePage() {
                 });
               })()}
             </div>
-          </div>
-
-          {/* Carousel Pagination Dots */}
-          <div className="flex items-center justify-center gap-2 mt-6">
-            {galleryImages.map((img, idx) => (
-              <button
-                key={`dot-${img.id}`}
-                onClick={() => setActiveGalleryIndex(idx)}
-                className={`transition-all duration-300 rounded-full ${idx === activeGalleryIndex
-                    ? "w-8 h-2.5 bg-[#355E3B]"
-                    : "w-2.5 h-2.5 bg-gray-600 hover:bg-gray-400"
-                  }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
           </div>
         </div>
       </section>
