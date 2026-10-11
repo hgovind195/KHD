@@ -87,7 +87,7 @@ export default function ProjectsPage() {
       status: "ONGOING",
       area: "5,500 sq.ft.",
       image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787838222/ChatGPT_Image_Aug_25_2026_08_13_40_PM_tt2hu0.png",
-      imageFit: "contain",
+      imagePosition: "center 47%",
       description: "A prestigious 5,500 sq.ft. ongoing turnkey luxury residence in Thekkuthodu featuring modern architectural elevation, reinforced structural engineering, and premium finishes.",
     },
     {
@@ -266,30 +266,29 @@ export default function ProjectsPage() {
                   className="bg-white border border-[#E0C0B2] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover-lift flex flex-col group"
                 >
                   <div className="relative h-64 md:h-72 bg-[#141515] overflow-hidden flex items-center justify-center">
-                    {project.imageFit === "contain" && (
-                      <img
-                        src={optimizeCloudinary(project.image, 200)}
-                        alt=""
-                        aria-hidden="true"
-                        className="absolute inset-0 w-full h-full object-cover blur-md scale-110 opacity-30"
-                      />
-                    )}
                     <img
                       src={optimizeCloudinary(project.image, 800)}
                       alt={project.title}
                       loading="lazy"
                       decoding="async"
-                      className={`relative z-10 ${
-                        project.imageFit === "contain"
-                          ? "w-full h-full object-contain p-1"
-                          : `w-full h-full object-cover ${project.imagePosition || "object-top"}`
+                      style={
+                        project.imagePosition && !project.imagePosition.startsWith("object-")
+                          ? { objectPosition: project.imagePosition }
+                          : undefined
+                      }
+                      className={`w-full h-full object-cover ${
+                        project.imagePosition?.startsWith("object-")
+                          ? project.imagePosition
+                          : !project.imagePosition
+                          ? "object-top"
+                          : ""
                       } group-hover:scale-105 transition-transform duration-700`}
                     />
-                    <div className="absolute top-3 left-3 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded shadow">
+                    <div className="absolute top-3 left-3 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded shadow z-20">
                       {project.category}
                     </div>
                     {project.status && (
-                      <div className="absolute bottom-3 right-3">
+                      <div className="absolute bottom-3 right-3 z-20">
                         <span className="bg-[#355E3B]/90 backdrop-blur-md text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded border border-white/20 shadow">
                           {project.status}
                         </span>
@@ -382,23 +381,20 @@ export default function ProjectsPage() {
 
               return (
                 <div className="relative h-72 sm:h-96 md:h-[460px] bg-[#0D0E0E] overflow-hidden shrink-0 flex items-center justify-center">
-                  {selectedProject.imageFit === "contain" && (
-                    <img
-                      src={optimizeCloudinary(currentImg, 300)}
-                      alt=""
-                      aria-hidden="true"
-                      className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-35"
-                    />
-                  )}
                   <img
                     key={currentImg}
                     src={optimizeCloudinary(currentImg, 1400)}
                     alt={selectedProject.title}
                     decoding="async"
-                    className={`relative z-10 ${
-                      selectedProject.imageFit === "contain"
-                        ? "w-full h-full object-contain p-2"
-                        : "w-full h-full object-cover object-center"
+                    style={
+                      selectedProject.imagePosition && !selectedProject.imagePosition.startsWith("object-")
+                        ? { objectPosition: selectedProject.imagePosition }
+                        : undefined
+                    }
+                    className={`w-full h-full object-cover ${
+                      selectedProject.imagePosition?.startsWith("object-")
+                        ? selectedProject.imagePosition
+                        : "object-center"
                     } transition-all duration-300 animate-fadeIn`}
                   />
                   {/* Subtle top & bottom gradient overlays */}
