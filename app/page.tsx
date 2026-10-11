@@ -6,6 +6,7 @@ import { ArrowRight, Building, Award, Users, CheckCircle2, ShieldAlert, Layers, 
 import BrandTree from "@/components/BrandTree";
 import QuoteModal from "@/components/QuoteModal";
 import ScrollReveal from "@/components/ScrollReveal";
+import { optimizeCloudinary } from "@/lib/cloudinary";
 
 export default function HomePage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
@@ -18,34 +19,34 @@ export default function HomePage() {
       title: "Mr. Joseph Nechikadan (Universal College, Principal)",
       category: "🏛️ Educational Project — Pathanamthitta",
       description: "Total Area: 12,000 Sq. Ft. | Status: Completed (2022)",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785867721/univer_eallrd.png",
+      src: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785867721/univer_eallrd.png"),
     },
     {
       id: 1,
       title: "Mrs. Ancy Shibu",
       category: "🏠 Residential Project-Perunad",
       description: "Built Area: 1,500 sq. Ft | Year of Completion: 2025",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785749779/ChatGPT_Image_Aug_3_2026_02_58_25_PM_y0bplz.png",
+      src: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785749779/ChatGPT_Image_Aug_3_2026_02_58_25_PM_y0bplz.png"),
     },
     {
       id: 2,
       title: "Mr. Rahul",
       category: "🏠Residential Project — Kollam",
       description: "Total Area: 2,000 Sq. Ft. | Status: Completed (2023)",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785740983/mr_rahul_wihpih.png",
+      src: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785740983/mr_rahul_wihpih.png"),
     },
     {
       id: 3,
       title: "Mr. Sasi Kumar",
       category: "🏠 Residential Project — Aranmula",
       description: "Total Area: 1,500 Sq. Ft. | Status: Completed (2024)",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785743374/mr_sasi_kumar_hzl1bj.png",
+      src: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785743374/mr_sasi_kumar_hzl1bj.png"),
     },
     {
       id: 4,
       title: "Mr. Manu Mohan",
       category: "🏠Residential Project — Mavelikkara",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785745641/manu_mmohan_lbty9s.png",
+      src: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785745641/manu_mmohan_lbty9s.png"),
       objectPosition: "center 15%",
     },
     {
@@ -53,7 +54,7 @@ export default function HomePage() {
       title: "Mr. Jalaludheen",
       category: "🏠 Residential Project — Pathanamthitta",
       description: "4 BHK | Total Area: 2,000 Sq. Ft |Status: Completed (2025)",
-      src: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785744265/name_xkrpa5.png",
+      src: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785744265/name_xkrpa5.png"),
     },
   ]);
 
@@ -71,7 +72,7 @@ export default function HomePage() {
       title: "Universal College Educational Campus",
       category: "Construction",
       location: "Collectorate, Pathanamthitta, Kerala",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785766841/ChatGPT_Image_Aug_3_2026_03_22_26_PM_i9ho2y.png",
+      image: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785766841/ChatGPT_Image_Aug_3_2026_03_22_26_PM_i9ho2y.png", 900),
       area: "12,000 sq.ft.",
       units: "An inspiring, functional learning space crafted to support contemporary teaching and student development.",
     },
@@ -80,7 +81,7 @@ export default function HomePage() {
       title: "Wilson's Residence",
       category: "Interior",
       location: "Tiruvalla, Pathanamthitta",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786078952/ChatGPT_Image_Aug_7_2026_10_31_31_AM_gfb4nr.png",
+      image: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1786078952/ChatGPT_Image_Aug_7_2026_10_31_31_AM_gfb4nr.png", 900),
       area: "4,500 sq.ft.",
       units: "Complete interior spatial design, custom teakwood woodwork & central courtyard feature.",
     },
@@ -89,7 +90,7 @@ export default function HomePage() {
       title: "Mathew's Residence",
       category: "Infrastructure",
       location: "Vadasserikkara, Pathanamthitta",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786114982/ChatGPT_Image_Aug_7_2026_07_48_54_PM_bjki0f.png",
+      image: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1786114982/ChatGPT_Image_Aug_7_2026_07_48_54_PM_bjki0f.png", 900),
       area: "3,300 sq.ft.",
       units: "Supervision on Structural engineering advisory by Master Plan Consultancy.",
     },
@@ -98,7 +99,7 @@ export default function HomePage() {
       title: "Hotel 24inn residency",
       category: "Commercial & Interior",
       location: "Pathanamthitta, Kerala",
-      image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785870848/ChatGPT_Image_Aug_5_2026_12_42_57_AM_chy8pc.png",
+      image: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785870848/ChatGPT_Image_Aug_5_2026_12_42_57_AM_chy8pc.png", 900),
       area: "15,500 sq.ft.",
       units: "Bespoke hotel & luxury residency project featuring architectural master planning.",
     },
@@ -138,15 +139,14 @@ export default function HomePage() {
   ];
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center bg-[#1B1C1C] text-white overflow-hidden">
         {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center opacity-40 transform scale-105 transition-transform duration-10000"
           style={{
-            backgroundImage:
-              "url('https://res.cloudinary.com/w1tsvtbe/image/upload/v1787673057/ChatGPT_Image_Aug_25_2026_08_17_21_PM_bejzbi.png')",
+            backgroundImage: `url('${optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1787673057/ChatGPT_Image_Aug_25_2026_08_17_21_PM_bejzbi.png")}')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#1B1C1C] via-[#1B1C1C]/80 to-transparent z-0"></div>
@@ -263,6 +263,8 @@ export default function HomePage() {
                     <img
                       src={proj.image}
                       alt={proj.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                     />
                     <div className="absolute top-4 left-4 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-md shadow">
@@ -432,7 +434,7 @@ export default function HomePage() {
                         }
                       }}
                       className={`transition-all duration-500 cursor-pointer rounded-2xl overflow-hidden border shrink-0 ${isCenter
-                        ? "w-[300px] sm:w-[380px] md:w-[420px] scale-100 z-30 shadow-[0_25px_60px_rgba(53,94,59,0.45)] border-4 border-[#355E3B] ring-4 ring-[#355E3B]/30 bg-[#2A2B2B]"
+                        ? "w-[88vw] max-w-[340px] sm:max-w-none sm:w-[380px] md:w-[420px] scale-100 z-30 shadow-[0_25px_60px_rgba(53,94,59,0.45)] border-4 border-[#355E3B] ring-4 ring-[#355E3B]/30 bg-[#2A2B2B]"
                         : "hidden md:block w-48 lg:w-64 scale-85 opacity-35 z-10 border-gray-800 bg-[#2A2B2B]/60 hover:opacity-75 hover:scale-90"
                         }`}
                     >
@@ -441,6 +443,8 @@ export default function HomePage() {
                           key={`img-${img.id}`}
                           src={img.src}
                           alt={img.title}
+                          loading="lazy"
+                          decoding="async"
                           style={{ objectPosition: (img as any).objectPosition || "center center" }}
                           className="w-full h-full object-cover transition-opacity duration-500 animate-fadeIn"
                         />
@@ -481,8 +485,14 @@ export default function HomePage() {
 
       {/* Gallery Lightbox Modal */}
       {selectedGalleryImage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fadeIn">
-          <div className="relative max-w-4xl max-h-[90vh] w-full flex flex-col items-center">
+        <div
+          className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fadeIn"
+          onClick={() => setSelectedGalleryImage(null)}
+        >
+          <div
+            className="relative max-w-4xl max-h-[90vh] w-full flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setSelectedGalleryImage(null)}
               className="absolute -top-12 right-0 p-2 text-white hover:text-[#355E3B] transition-colors"
@@ -493,6 +503,7 @@ export default function HomePage() {
             <img
               src={selectedGalleryImage}
               alt="Expanded Gallery View"
+              decoding="async"
               className="max-h-[80vh] max-w-full object-contain rounded-xl shadow-2xl border-2 border-white/20"
             />
           </div>

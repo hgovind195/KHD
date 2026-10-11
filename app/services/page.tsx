@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Building, Compass, PenTool, CheckCircle2, ArrowRight, ShieldCheck, Cpu, HardHat, FileText, PhoneCall } from "lucide-react";
 import QuoteModal from "@/components/QuoteModal";
+import { optimizeCloudinary } from "@/lib/cloudinary";
 
 export default function ServicesPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function ServicesPage() {
       tagline: "End-to-end building solutions from foundation to luxury/budget key handover.",
       icon: Building,
       badgeColor: "bg-[#355E3B]",
-      logo: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1785851706/font_tp_pinjpz.png",
+      logo: optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785851706/font_tp_pinjpz.png", 600),
       features: [
         "Custom Luxury Villa Construction & Gated Communities",
         "Multi-Story High-Rise Residential Apartments",
@@ -75,7 +76,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Header */}
       <section className="bg-[#1B1C1C] text-white py-20 px-4 md:px-8 border-b-4 border-[#355E3B]">
         <div className="max-w-7xl mx-auto text-center space-y-4">
@@ -191,6 +192,8 @@ export default function ServicesPage() {
                         <img
                           src={service.logo}
                           alt={`${service.division} Logo`}
+                          loading="lazy"
+                          decoding="async"
                           className="max-h-full max-w-full object-contain drop-shadow-sm"
                         />
                       ) : (

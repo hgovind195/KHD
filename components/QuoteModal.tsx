@@ -52,8 +52,8 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-      <div className="relative w-full max-w-xl bg-white border border-[#E0C0B2] shadow-2xl rounded-2xl overflow-hidden">
+    <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
+      <div className="relative w-full max-w-xl bg-white border border-[#E0C0B2] shadow-2xl rounded-2xl overflow-hidden my-auto">
         {/* Header */}
         <div className="bg-[#1B1C1C] text-white p-6 border-b-4 border-[#355E3B] flex justify-between items-center">
           <div>

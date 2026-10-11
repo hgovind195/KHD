@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { MapPin, Building, Calendar, Layers, ArrowRight, Filter, ChevronLeft, ChevronRight } from "lucide-react";
 import QuoteModal from "@/components/QuoteModal";
+import { optimizeCloudinary } from "@/lib/cloudinary";
 
 interface ProjectItem {
   id: string;
@@ -202,7 +203,7 @@ export default function ProjectsPage() {
       : projectsData.filter((p) => p.category === activeFilter);
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Header */}
       <section className="bg-[#1B1C1C] text-white py-20 px-4 md:px-8 border-b-4 border-[#355E3B]">
         <div className="max-w-7xl mx-auto text-center space-y-4">
@@ -264,8 +265,10 @@ export default function ProjectsPage() {
                 >
                   <div className="relative h-64 md:h-72 bg-[#141515] overflow-hidden flex items-center justify-center">
                     <img
-                      src={project.image}
+                      src={optimizeCloudinary(project.image, 800)}
                       alt={project.title}
+                      loading="lazy"
+                      decoding="async"
                       className={`w-full h-full object-cover ${project.imagePosition || "object-top"} group-hover:scale-105 transition-transform duration-700`}
                     />
                     <div className="absolute top-3 left-3 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded shadow">
@@ -296,7 +299,7 @@ export default function ProjectsPage() {
                           className="w-12 h-9 rounded overflow-hidden border-2 border-white hover:border-[#355E3B] shrink-0 transition-all shadow-sm focus:outline-none"
                           title={`View image ${i + 1}`}
                         >
-                          <img src={imgUrl} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
+                          <img src={optimizeCloudinary(imgUrl, 200)} alt={`Thumbnail ${i + 1}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                         </button>
                       ))}
                     </div>
@@ -349,7 +352,7 @@ export default function ProjectsPage() {
             setSelectedProject(null);
             setModalImgIndex(0);
           }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-black/75 backdrop-blur-sm animate-fadeIn"
+          className="fixed inset-0 z-[99999] flex items-center justify-center p-4 md:p-6 bg-black/85 backdrop-blur-md animate-fadeIn"
         >
           <div
             onClick={(e) => e.stopPropagation()}
@@ -367,8 +370,9 @@ export default function ProjectsPage() {
                 <div className="relative h-72 sm:h-96 md:h-[460px] bg-[#0D0E0E] overflow-hidden shrink-0 flex items-center justify-center">
                   <img
                     key={currentImg}
-                    src={currentImg}
+                    src={optimizeCloudinary(currentImg, 1400)}
                     alt={selectedProject.title}
+                    decoding="async"
                     className="w-full h-full object-cover object-center transition-all duration-300 animate-fadeIn"
                   />
                   {/* Subtle top & bottom gradient overlays */}
@@ -433,7 +437,7 @@ export default function ProjectsPage() {
                               : "border-white/30 opacity-60 hover:opacity-100"
                               }`}
                           >
-                            <img src={img} alt={`Thumb ${idx + 1}`} className="w-full h-full object-cover" />
+                            <img src={optimizeCloudinary(img, 160)} alt={`Thumb ${idx + 1}`} decoding="async" className="w-full h-full object-cover" />
                           </button>
                         ))}
                       </div>

@@ -40,7 +40,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Header */}
       <section className="bg-[#1B1C1C] text-white py-20 px-4 md:px-8 border-b-4 border-[#D35400]">
         <div className="max-w-7xl mx-auto text-center space-y-4">

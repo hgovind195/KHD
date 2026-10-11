@@ -25,6 +25,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import QuoteModal from "@/components/QuoteModal";
+import { optimizeCloudinary } from "@/lib/cloudinary";
 
 export default function AboutPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
@@ -100,14 +101,14 @@ export default function AboutPage() {
   ];
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Hero Section with Background & Floating Glass Effect */}
       <section className="relative min-h-[80vh] flex items-center py-24 px-4 md:px-8 border-b-4 border-[#D35400] overflow-hidden">
         {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 transition-transform duration-10000 z-0"
           style={{
-            backgroundImage: "url('https://res.cloudinary.com/w1tsvtbe/image/upload/a_-90/v1786125408/We_Design_Homes_from_Sketch_to_Stunning_Kerala_Villas_kckkev.jpg')",
+            backgroundImage: `url('${optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/a_-90/v1786125408/We_Design_Homes_from_Sketch_to_Stunning_Kerala_Villas_kckkev.jpg")}')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/50 backdrop-blur-[2px] z-0"></div>
@@ -278,8 +279,10 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-14 h-12 bg-white p-1.5 rounded-lg flex items-center justify-center shrink-0 border border-gray-200">
                     <img
-                      src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785736185/Screenshot_2026-08-01_092139_magic_timyra.png"
+                      src={optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785736185/Screenshot_2026-08-01_092139_magic_timyra.png", 600)}
                       alt="Master Plan Engineering"
+                      loading="lazy"
+                      decoding="async"
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>
@@ -316,8 +319,10 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-14 h-12 bg-white p-1.5 rounded-lg flex items-center justify-center shrink-0 border border-gray-200">
                     <img
-                      src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1785851706/font_tp_pinjpz.png"
+                      src={optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785851706/font_tp_pinjpz.png", 600)}
                       alt="Kerala Homes"
+                      loading="lazy"
+                      decoding="async"
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>
@@ -354,8 +359,10 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-14 h-12 bg-white p-1.5 rounded-lg flex items-center justify-center shrink-0 border border-gray-200">
                     <img
-                      src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_600/v1785737271/bg_nsnrga.png"
+                      src={optimizeCloudinary("https://res.cloudinary.com/w1tsvtbe/image/upload/v1785737271/bg_nsnrga.png", 600)}
                       alt="Innovature Designs"
+                      loading="lazy"
+                      decoding="async"
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>

@@ -49,8 +49,12 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img
-              src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1785851706/font_tp_pinjpz.png"
+              src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_240/v1785851706/font_tp_pinjpz.png"
               alt="Kerala Homes Logo"
+              width={80}
+              height={72}
+              loading="eager"
+              decoding="async"
               className="h-12 md:h-15 lg:h-18 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-sm"
             />
             <div className="flex flex-col justify-center">
