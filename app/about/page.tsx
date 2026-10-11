@@ -22,11 +22,14 @@ import {
   Hammer,
   ArrowRight,
   Handshake,
+  X,
+  ExternalLink,
 } from "lucide-react";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function AboutPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
+  const [panDocModalOpen, setPanDocModalOpen] = useState(false);
 
   const stats = [
     { number: "100+", label: "PROJECTS COMPLETED", icon: Building2 },
@@ -404,40 +407,74 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Membership 1: BAI */}
-            <div className="bg-white border-2 border-[#355E3B]/30 rounded-2xl p-6 md:p-8 flex items-center gap-5 shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all">
-              <div className="w-14 h-14 bg-[#355E3B]/10 text-[#355E3B] rounded-xl flex items-center justify-center shrink-0 border border-[#355E3B]/20">
-                <Building2 className="w-7 h-7 text-[#355E3B]" />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] bg-[#355E3B]/10 px-2.5 py-0.5 rounded-full inline-block">
-                  Registered Member
-                </span>
-                <h3 className="font-extrabold text-lg md:text-xl text-[#1B1C1C] uppercase leading-tight">
-                  Member, Builders Association of India (BAI)
-                </h3>
-                <p className="text-gray-600 text-xs leading-relaxed">
-                  Affiliated with India’s premier national apex body of civil engineering & construction contractors.
-                </p>
+            <div className="bg-white border-2 border-[#355E3B]/30 rounded-2xl p-6 md:p-7 flex flex-col justify-between shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all">
+              <div className="space-y-4">
+                <div className="w-14 h-14 bg-[#355E3B]/10 text-[#355E3B] rounded-xl flex items-center justify-center shrink-0 border border-[#355E3B]/20">
+                  <Building2 className="w-7 h-7 text-[#355E3B]" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] bg-[#355E3B]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    Registered Member
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    Builders Association of India (BAI)
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Affiliated with India’s premier national apex body of civil engineering &amp; construction contractors.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Membership 2: APCAD */}
-            <div className="bg-white border-2 border-[#D35400]/30 rounded-2xl p-6 md:p-8 flex items-center gap-5 shadow-lg hover:border-[#D35400] hover:-translate-y-1 transition-all">
-              <div className="w-14 h-14 bg-[#D35400]/10 text-[#D35400] rounded-xl flex items-center justify-center shrink-0 border border-[#D35400]/20">
-                <Award className="w-7 h-7 text-[#D35400]" />
+            <div className="bg-white border-2 border-[#D35400]/30 rounded-2xl p-6 md:p-7 flex flex-col justify-between shadow-lg hover:border-[#D35400] hover:-translate-y-1 transition-all">
+              <div className="space-y-4">
+                <div className="w-14 h-14 bg-[#D35400]/10 text-[#D35400] rounded-xl flex items-center justify-center shrink-0 border border-[#D35400]/20">
+                  <Award className="w-7 h-7 text-[#D35400]" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#D35400] bg-[#D35400]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    Registered Member
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    Association of Private Contractors &amp; Developers (APCAD)
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Promoting state-wide standards in safety, transparent execution, and technical excellence.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#D35400] bg-[#D35400]/10 px-2.5 py-0.5 rounded-full inline-block">
-                  Registered Member
-                </span>
-                <h3 className="font-extrabold text-lg md:text-xl text-[#1B1C1C] uppercase leading-tight">
-                  Member, Association of Private Contractors & Developers (APCAD)
-                </h3>
-                <p className="text-gray-600 text-xs leading-relaxed">
-                  Promoting state-wide standards in safety, transparent execution, and technical excellence.
-                </p>
+            </div>
+
+            {/* Card 3: COMPANY PAN CARD */}
+            <div className="bg-white border-2 border-[#355E3B]/30 rounded-2xl p-6 md:p-7 flex flex-col justify-between shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all group">
+              <div className="space-y-4">
+                <div className="w-14 h-14 bg-[#355E3B]/10 text-[#355E3B] rounded-xl flex items-center justify-center shrink-0 border border-[#355E3B]/20">
+                  <FileCheck className="w-7 h-7 text-[#355E3B]" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] bg-[#355E3B]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    Govt. Verified Identity
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    COMPANY PAN CARD
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Official tax identity certificate issued by the Income Tax Department, Government of India.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-5 mt-4 border-t border-gray-100">
+                <button
+                  type="button"
+                  onClick={() => setPanDocModalOpen(true)}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#355E3B] hover:bg-[#2B4C30] text-white py-2.5 px-4 rounded-lg font-bold uppercase text-xs tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95"
+                >
+                  <Eye className="w-4 h-4" />
+                  <span>View Document</span>
+                </button>
               </div>
             </div>
           </div>
@@ -488,6 +525,57 @@ export default function AboutPage() {
       </section>
 
       <QuoteModal isOpen={quoteModalOpen} onClose={() => setQuoteModalOpen(false)} />
+
+      {/* COMPANY PAN CARD Lightbox Modal */}
+      {panDocModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn overflow-y-auto"
+          onClick={() => setPanDocModalOpen(false)}
+        >
+          <div
+            className="relative max-w-[95vw] sm:max-w-3xl max-h-[92vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-3.5 sm:p-5 shadow-2xl flex flex-col items-center justify-between my-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="w-full flex items-center justify-between pb-2.5 sm:pb-3 border-b border-gray-800 shrink-0">
+              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-1.5 sm:gap-2 leading-tight">
+                <FileCheck className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#355E3B] shrink-0" />
+                COMPANY PAN CARD • Official Tax Identity Document
+              </span>
+              <button
+                type="button"
+                onClick={() => setPanDocModalOpen(false)}
+                className="p-1 sm:p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors shrink-0"
+                aria-label="Close document modal"
+              >
+                <X className="w-4 sm:w-5 h-4 sm:h-5" />
+              </button>
+            </div>
+
+            <div className="w-full h-full p-1.5 my-2 flex items-center justify-center overflow-auto">
+              <img
+                src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                alt="Kerala Homes Company PAN Card Document"
+                className="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
+              />
+            </div>
+
+            <div className="pt-2.5 sm:pt-3 w-full flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 gap-2 shrink-0">
+              <span className="text-[10px] sm:text-[11px] text-gray-400 font-medium text-center sm:text-left">
+                Income Tax Department — Govt. of India
+              </span>
+              <a
+                href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] sm:text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1.5"
+              >
+                <span>Open Original File</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
