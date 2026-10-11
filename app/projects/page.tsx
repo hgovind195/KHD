@@ -199,8 +199,9 @@ export default function ProjectsPage() {
       area: "3300 sq.ft.",
       image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
       imagePosition: "center 50%",
-      imageFits: ["cover", "contain", "cover", "contain"],
-      imagePositions: ["center 50%", "center center", "center 55%", "center center"],
+      imageFit: "cover",
+      imageFits: ["cover", "cover", "cover", "cover"],
+      imagePositions: ["center 50%", "center 55%", "center 55%", "center 60%"],
       images: [
         "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
         "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png",
