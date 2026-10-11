@@ -88,10 +88,20 @@ export default function Navbar() {
           </nav>
 
           {/* CTA & Mobile trigger */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            <a
+              href="tel:+917511111000"
+              className="inline-flex items-center gap-2 bg-[#D35400] hover:bg-[#B84700] text-white px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold uppercase text-[11px] sm:text-xs tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95"
+              title="Call +91 75111 11000"
+            >
+              <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+              <span className="hidden sm:inline">+91 75111 11000</span>
+              <span className="sm:hidden">Call Us</span>
+            </a>
+
             <button
               onClick={() => setQuoteModalOpen(true)}
-              className="hidden md:inline-flex bg-[#355E3B] hover:bg-[#2B4C30] text-white px-5 py-2.5 rounded font-bold uppercase text-xs tracking-widest shadow-md hover:shadow-lg transition-all"
+              className="hidden md:inline-flex bg-[#355E3B] hover:bg-[#2B4C30] text-white px-5 py-2.5 rounded-lg font-bold uppercase text-xs tracking-widest shadow-md hover:shadow-lg transition-all active:scale-95"
             >
               Get a Quote
             </button>
@@ -129,15 +139,24 @@ export default function Navbar() {
             </div>
 
             <div className="pt-4 border-t border-gray-100 space-y-3">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setQuoteModalOpen(true);
-                }}
-                className="w-full bg-[#355E3B] text-white py-3 rounded font-bold uppercase text-xs tracking-widest shadow text-center"
-              >
-                Get a Quote
-              </button>
+              <div className="grid grid-cols-2 gap-3">
+                <a
+                  href="tel:+917511111000"
+                  className="bg-[#D35400] hover:bg-[#B84700] text-white py-3 rounded-lg font-bold uppercase text-xs tracking-wider shadow flex items-center justify-center gap-2 text-center"
+                >
+                  <PhoneCall className="w-4 h-4" />
+                  <span>Call Us</span>
+                </a>
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setQuoteModalOpen(true);
+                  }}
+                  className="bg-[#355E3B] hover:bg-[#2B4C30] text-white py-3 rounded-lg font-bold uppercase text-xs tracking-widest shadow text-center"
+                >
+                  Get a Quote
+                </button>
+              </div>
               <div className="text-center text-xs text-gray-500 font-medium space-y-1">
                 <div>Kerala Homes &amp; Developers Pvt. Ltd.</div>
                 <div className="text-gray-400 text-[11px] flex items-center justify-center gap-1">
