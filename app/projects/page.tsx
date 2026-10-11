@@ -196,6 +196,13 @@ export default function ProjectsPage() {
       status: "Completed (2024)",
       area: "3300 sq.ft.",
       image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
+      imagePosition: "center 50%",
+      images: [
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920203/ChatGPT_Image_Aug_28_2026_05_59_37_PM_omsapx.png",
+        "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920241/ChatGPT_Image_Aug_28_2026_05_57_39_PM_gvdwtp.png",
+      ],
       description: "Turnkey residential villa construction engineered with modern architectural aesthetics, premium structural foundation, and luxury interior woodwork in Mylapra.",
     },
   ];
@@ -279,13 +286,12 @@ export default function ProjectsPage() {
                           ? { objectPosition: project.imagePosition }
                           : undefined
                       }
-                      className={`w-full h-full object-cover ${
-                        project.imagePosition?.startsWith("object-")
-                          ? project.imagePosition
-                          : !project.imagePosition
+                      className={`w-full h-full object-cover ${project.imagePosition?.startsWith("object-")
+                        ? project.imagePosition
+                        : !project.imagePosition
                           ? "object-top"
                           : ""
-                      } group-hover:scale-105 transition-transform duration-700`}
+                        } group-hover:scale-105 transition-transform duration-700`}
                     />
                     <div className="absolute top-3 left-3 bg-[#355E3B] text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded shadow z-20">
                       {project.category}
@@ -383,22 +389,22 @@ export default function ProjectsPage() {
               const hasMultiple = projectImages.length > 1;
 
               return (
-                <div className="relative h-72 sm:h-96 md:h-[460px] bg-[#0D0E0E] overflow-hidden shrink-0 flex items-center justify-center">
+                <div className="relative h-72 sm:h-96 md:h-[480px] bg-[#0D0E0E] overflow-hidden shrink-0 flex items-center justify-center">
+                  {/* Ambient background fill to fill the box edge-to-edge */}
+                  <img
+                    src={optimizeCloudinary(currentImg, 300)}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover blur-2xl scale-125 opacity-40 pointer-events-none"
+                  />
+
+                  {/* Foreground image completely visible without being cropped */}
                   <img
                     key={currentImg}
                     src={optimizeCloudinary(currentImg, 1400)}
                     alt={selectedProject.title}
                     decoding="async"
-                    style={
-                      selectedProject.imagePosition && !selectedProject.imagePosition.startsWith("object-")
-                        ? { objectPosition: selectedProject.imagePosition }
-                        : undefined
-                    }
-                    className={`w-full h-full object-cover ${
-                      selectedProject.imagePosition?.startsWith("object-")
-                        ? selectedProject.imagePosition
-                        : "object-center"
-                    } transition-all duration-300 animate-fadeIn`}
+                    className="relative z-10 max-w-full max-h-full object-contain p-2 sm:p-4 transition-all duration-300 animate-fadeIn"
                   />
                   {/* Subtle top & bottom gradient overlays */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/60 pointer-events-none z-10"></div>
