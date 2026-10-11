@@ -468,14 +468,25 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="pt-4 mt-3 border-t border-gray-100">
+              <div className="pt-4 mt-3 border-t border-gray-100 flex items-center justify-between gap-3 flex-wrap">
+                <a
+                  href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#355E3B] hover:text-[#2B4C30] underline underline-offset-4 decoration-[#355E3B]/40 hover:decoration-[#355E3B] transition-colors"
+                >
+                  <span>View Document</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+
                 <button
                   type="button"
                   onClick={() => setPanModalState("small")}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#355E3B] hover:text-[#2B4C30] underline underline-offset-4 decoration-[#355E3B]/40 hover:decoration-[#355E3B] transition-colors group/btn"
+                  className="inline-flex items-center gap-1 text-[11px] font-semibold text-gray-600 hover:text-white hover:bg-[#355E3B] bg-gray-100 px-2.5 py-1 rounded-md transition-all border border-gray-200"
+                  title="Open interactive preview dialog"
                 >
-                  <span>View Document</span>
-                  <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" />
+                  <Eye className="w-3 h-3 text-[#355E3B]" />
+                  <span>Preview Dialog</span>
                 </button>
               </div>
             </div>
@@ -531,7 +542,7 @@ export default function AboutPage() {
       {/* Two-Stage Document Dialog Box (Small -> Large) */}
       {panModalState && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn"
+          className="fixed inset-0 z-[99999] flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn"
           onClick={() => setPanModalState(null)}
         >
           <div
