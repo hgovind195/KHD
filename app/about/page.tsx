@@ -29,7 +29,6 @@ import QuoteModal from "@/components/QuoteModal";
 
 export default function AboutPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
-  const [panDocModalOpen, setPanDocModalOpen] = useState(false);
 
   const stats = [
     { number: "100+", label: "PROJECTS COMPLETED", icon: Building2 },
@@ -466,15 +465,16 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="pt-5 mt-4 border-t border-gray-100">
-                <button
-                  type="button"
-                  onClick={() => setPanDocModalOpen(true)}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#355E3B] hover:bg-[#2B4C30] text-white py-2.5 px-4 rounded-lg font-bold uppercase text-xs tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95"
+              <div className="pt-4 mt-3 border-t border-gray-100">
+                <a
+                  href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#355E3B] hover:text-[#2B4C30] underline underline-offset-4 decoration-[#355E3B]/40 hover:decoration-[#355E3B] transition-colors"
                 >
-                  <Eye className="w-4 h-4" />
                   <span>View Document</span>
-                </button>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
               </div>
             </div>
           </div>
@@ -525,57 +525,6 @@ export default function AboutPage() {
       </section>
 
       <QuoteModal isOpen={quoteModalOpen} onClose={() => setQuoteModalOpen(false)} />
-
-      {/* COMPANY PAN CARD Lightbox Modal */}
-      {panDocModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn overflow-y-auto"
-          onClick={() => setPanDocModalOpen(false)}
-        >
-          <div
-            className="relative max-w-[95vw] sm:max-w-3xl max-h-[92vh] w-full bg-[#1B1C1C] rounded-2xl border border-white/20 p-3.5 sm:p-5 shadow-2xl flex flex-col items-center justify-between my-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="w-full flex items-center justify-between pb-2.5 sm:pb-3 border-b border-gray-800 shrink-0">
-              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-white flex items-center gap-1.5 sm:gap-2 leading-tight">
-                <FileCheck className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#355E3B] shrink-0" />
-                COMPANY PAN CARD • Official Tax Identity Document
-              </span>
-              <button
-                type="button"
-                onClick={() => setPanDocModalOpen(false)}
-                className="p-1 sm:p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors shrink-0"
-                aria-label="Close document modal"
-              >
-                <X className="w-4 sm:w-5 h-4 sm:h-5" />
-              </button>
-            </div>
-
-            <div className="w-full h-full p-1.5 my-2 flex items-center justify-center overflow-auto">
-              <img
-                src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
-                alt="Kerala Homes Company PAN Card Document"
-                className="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain rounded-lg shadow-lg border border-white/10"
-              />
-            </div>
-
-            <div className="pt-2.5 sm:pt-3 w-full flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 gap-2 shrink-0">
-              <span className="text-[10px] sm:text-[11px] text-gray-400 font-medium text-center sm:text-left">
-                Income Tax Department — Govt. of India
-              </span>
-              <a
-                href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[11px] sm:text-xs font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 flex items-center gap-1.5"
-              >
-                <span>Open Original File</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
