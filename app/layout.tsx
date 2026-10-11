@@ -32,7 +32,10 @@ export const metadata: Metadata = {
     "Luxury Villas Kerala",
   ],
   icons: {
-    icon: "/icon.png",
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
     shortcut: "/icon.png",
     apple: "/icon.png",
   },
@@ -49,6 +52,9 @@ export default function RootLayout({
       className={`${montserrat.variable} ${workSans.variable} h-full antialiased`}
     >
       <head>
+        <link rel="icon" href="/icon.png" sizes="any" type="image/png" />
+        <link rel="shortcut icon" href="/icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
       </head>
