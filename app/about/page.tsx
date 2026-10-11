@@ -405,7 +405,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {/* Membership 1: BAI */}
             <div className="bg-white border-2 border-[#355E3B]/30 rounded-2xl p-6 md:p-7 flex flex-col justify-between shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all">
               <div className="space-y-4">
@@ -470,6 +470,37 @@ export default function AboutPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#355E3B] hover:text-[#2B4C30] underline underline-offset-4 decoration-[#355E3B]/40 hover:decoration-[#355E3B] transition-colors"
+                >
+                  <span>View Document</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Card 4: Company Incorporation Certificate */}
+            <div className="bg-white border-2 border-[#D35400]/30 rounded-2xl p-6 md:p-7 flex flex-col justify-between shadow-lg hover:border-[#D35400] hover:-translate-y-1 transition-all group">
+              <div className="space-y-4">
+                <div className="w-14 h-14 bg-[#D35400]/10 text-[#D35400] rounded-xl flex items-center justify-center shrink-0 border border-[#D35400]/20">
+                  <ShieldCheck className="w-7 h-7 text-[#D35400]" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#D35400] bg-[#D35400]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    ROC Registration
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    Company Incorporation Certificate
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Official Certificate of Incorporation issued by Registrar of Companies (ROC), Ministry of Corporate Affairs, Govt. of India.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-4 mt-3 border-t border-gray-100 flex items-center justify-between">
+                <a
+                  href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920913/0_n7q3yd.webp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D35400] hover:text-[#B84700] underline underline-offset-4 decoration-[#D35400]/40 hover:decoration-[#D35400] transition-colors"
                 >
                   <span>View Document</span>
                   <ExternalLink className="w-3.5 h-3.5" />
