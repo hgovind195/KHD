@@ -91,7 +91,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="tel:+917511111000"
-              className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-4 py-2.5 rounded-lg font-bold uppercase text-xs tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95"
+              className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#172554] border border-[#1E3A8A] text-white px-4 py-2.5 rounded-lg font-bold uppercase text-xs tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95"
               title="Call Kerala Homes & Developers"
             >
               <PhoneCall className="w-4 h-4 text-white" />
@@ -141,7 +141,7 @@ export default function Navbar() {
               <div className="grid grid-cols-2 gap-3">
                 <a
                   href="tel:+917511111000"
-                  className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white py-3 rounded-lg font-bold uppercase text-xs tracking-wider shadow flex items-center justify-center gap-2 text-center"
+                  className="bg-[#1E3A8A] hover:bg-[#172554] border border-[#1E3A8A] text-white py-3 rounded-lg font-bold uppercase text-xs tracking-wider shadow flex items-center justify-center gap-2 text-center"
                 >
                   <PhoneCall className="w-4 h-4" />
                   <span>Call</span>

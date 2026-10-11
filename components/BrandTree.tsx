@@ -87,7 +87,7 @@ export default function BrandTree() {
 
                 <a
                   href="tel:+917511127335"
-                  className="inline-flex items-center gap-1.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-3 py-1.5 rounded-lg font-bold uppercase text-[11px] tracking-wider shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
+                  className="inline-flex items-center gap-1.5 bg-[#1E3A8A] hover:bg-[#172554] border border-[#1E3A8A] text-white px-3 py-1.5 rounded-lg font-bold uppercase text-[11px] tracking-wider shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
                   title="Call Master Plan (+91 75111 27335)"
                 >
                   <PhoneCall className="w-3.5 h-3.5 text-white" />
@@ -130,7 +130,7 @@ export default function BrandTree() {
 
                 <a
                   href="tel:+917511111000"
-                  className="inline-flex items-center gap-1.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-3.5 py-1.5 rounded-lg font-bold uppercase text-[11px] tracking-wider shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
+                  className="inline-flex items-center gap-1.5 bg-[#1E3A8A] hover:bg-[#172554] border border-[#1E3A8A] text-white px-3.5 py-1.5 rounded-lg font-bold uppercase text-[11px] tracking-wider shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
                   title="Call Kerala Homes (+91 75111 11000)"
                 >
                   <PhoneCall className="w-3.5 h-3.5 text-white" />
@@ -173,7 +173,7 @@ export default function BrandTree() {
 
                 <a
                   href="tel:+918921955878"
-                  className="inline-flex items-center gap-1.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-3 py-1.5 rounded-lg font-bold uppercase text-[11px] tracking-wider shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
+                  className="inline-flex items-center gap-1.5 bg-[#1E3A8A] hover:bg-[#172554] border border-[#1E3A8A] text-white px-3 py-1.5 rounded-lg font-bold uppercase text-[11px] tracking-wider shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
                   title="Call Innovature Designs (+91 89219 55878)"
                 >
                   <PhoneCall className="w-3.5 h-3.5 text-white" />

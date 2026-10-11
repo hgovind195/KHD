@@ -151,7 +151,7 @@ export default function ServicesPage() {
                       <button
                         type="button"
                         onClick={() => setActiveCallId(activeCallId === service.id ? null : service.id)}
-                        className="bg-[#1E3A8A] hover:bg-[#1E40AF] text-white px-5 py-3 rounded-lg font-bold uppercase text-xs tracking-widest flex items-center gap-2 transition-all shadow-md active:scale-95 border border-[#1E3A8A]"
+                        className="bg-[#1E3A8A] hover:bg-[#172554] text-white px-5 py-3 rounded-lg font-bold uppercase text-xs tracking-widest flex items-center gap-2 transition-all shadow-md active:scale-95 border border-[#1E3A8A]"
                         title="Click to view contact numbers"
                         aria-label="Toggle contact numbers"
                       >
