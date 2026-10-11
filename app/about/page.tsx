@@ -24,11 +24,14 @@ import {
   Handshake,
   X,
   ExternalLink,
+  Maximize2,
+  Minimize2,
 } from "lucide-react";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function AboutPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
+  const [panModalState, setPanModalState] = useState<"small" | "large" | null>(null);
 
   const stats = [
     { number: "100+", label: "PROJECTS COMPLETED", icon: Building2 },
@@ -466,15 +469,14 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="pt-4 mt-3 border-t border-gray-100">
-                <a
-                  href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#355E3B] hover:text-[#2B4C30] underline underline-offset-4 decoration-[#355E3B]/40 hover:decoration-[#355E3B] transition-colors"
+                <button
+                  type="button"
+                  onClick={() => setPanModalState("small")}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#355E3B] hover:text-[#2B4C30] underline underline-offset-4 decoration-[#355E3B]/40 hover:decoration-[#355E3B] transition-colors group/btn"
                 >
                   <span>View Document</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
+                  <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" />
+                </button>
               </div>
             </div>
           </div>
@@ -525,6 +527,119 @@ export default function AboutPage() {
       </section>
 
       <QuoteModal isOpen={quoteModalOpen} onClose={() => setQuoteModalOpen(false)} />
+
+      {/* Two-Stage Document Dialog Box (Small -> Large) */}
+      {panModalState && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-md animate-fadeIn"
+          onClick={() => setPanModalState(null)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className={`bg-[#1B1C1C] text-white rounded-2xl border border-white/20 shadow-2xl transition-all duration-300 flex flex-col my-auto ${
+              panModalState === "small"
+                ? "w-full max-w-sm sm:max-w-md p-4 animate-scaleUp"
+                : "w-full max-w-4xl max-h-[92vh] p-5 animate-scaleUp"
+            }`}
+          >
+            {/* Dialog Header */}
+            <div className="flex items-center justify-between pb-3 border-b border-gray-800 shrink-0">
+              <div className="flex items-center gap-2">
+                <FileCheck className="w-4 h-4 text-[#355E3B] shrink-0" />
+                <span className="text-xs font-extrabold uppercase tracking-widest text-white truncate">
+                  {panModalState === "small" ? "Document Preview" : "COMPANY PAN CARD • Full Document View"}
+                </span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                {panModalState === "small" ? (
+                  <button
+                    type="button"
+                    onClick={() => setPanModalState("large")}
+                    title="Expand to large dialog box"
+                    className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-[#355E3B] hover:text-white bg-[#355E3B]/15 hover:bg-[#355E3B] rounded-lg transition-all border border-[#355E3B]/30"
+                  >
+                    <Maximize2 className="w-3.5 h-3.5" />
+                    <span>Expand</span>
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setPanModalState("small")}
+                    title="Shrink to small dialog box"
+                    className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-gray-300 hover:text-white bg-white/10 hover:bg-white/20 rounded-lg transition-all"
+                  >
+                    <Minimize2 className="w-3.5 h-3.5" />
+                    <span>Shrink</span>
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => setPanModalState(null)}
+                  className="p-1.5 text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 rounded-lg transition-colors shrink-0"
+                  aria-label="Close dialog"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Document Image Container */}
+            <div className="my-3 flex-1 flex items-center justify-center overflow-hidden">
+              {panModalState === "small" ? (
+                <div
+                  onClick={() => setPanModalState("large")}
+                  className="relative group cursor-pointer w-full rounded-xl overflow-hidden border border-white/15 bg-black/40 flex items-center justify-center p-2"
+                >
+                  <img
+                    src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                    alt="Kerala Homes Company PAN Card Document Preview"
+                    className="max-h-56 sm:max-h-64 w-auto object-contain rounded-lg transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-1.5 text-xs font-bold text-white backdrop-blur-[2px]">
+                    <Maximize2 className="w-4 h-4 text-[#355E3B]" />
+                    <span>Click to open large box</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center overflow-auto p-1">
+                  <img
+                    src="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                    alt="Kerala Homes Company PAN Card Document Full View"
+                    className="max-h-[68vh] max-w-full object-contain rounded-lg shadow-2xl border border-white/10"
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Dialog Footer */}
+            <div className="pt-3 border-t border-gray-800 flex items-center justify-between gap-2 shrink-0 text-xs">
+              <span className="text-[11px] text-gray-400 font-medium">
+                Income Tax Department • Govt. of India
+              </span>
+              {panModalState === "small" ? (
+                <button
+                  type="button"
+                  onClick={() => setPanModalState("large")}
+                  className="inline-flex items-center gap-1 text-[11px] font-bold text-[#355E3B] hover:text-[#528F5A] transition-colors"
+                >
+                  <span>Open into large box</span>
+                  <Maximize2 className="w-3 h-3" />
+                </button>
+              ) : (
+                <a
+                  href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920041/COMPANY_PAN_oxgxhy.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] font-bold text-[#355E3B] hover:text-[#528F5A] underline underline-offset-2 transition-colors"
+                >
+                  <span>Open Original File</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
