@@ -19,6 +19,8 @@ interface ProjectItem {
   description: string;
   imagePosition?: string;
   imageFit?: "contain" | "cover";
+  imageFits?: ("contain" | "cover")[];
+  imagePositions?: string[];
 }
 
 export default function ProjectsPage() {
@@ -197,6 +199,8 @@ export default function ProjectsPage() {
       area: "3300 sq.ft.",
       image: "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
       imagePosition: "center 50%",
+      imageFits: ["cover", "contain", "cover", "contain"],
+      imagePositions: ["center 50%", "center center", "center 55%", "center center"],
       images: [
         "https://res.cloudinary.com/w1tsvtbe/image/upload/v1786376011/ChatGPT_Image_Aug_10_2026_09_02_28_PM_pq744k.png",
         "https://res.cloudinary.com/w1tsvtbe/image/upload/v1787920900/ChatGPT_Image_Aug_28_2026_06_10_46_PM_ksletq.png",
@@ -388,23 +392,46 @@ export default function ProjectsPage() {
               const currentImg = projectImages[modalImgIndex] || selectedProject.image;
               const hasMultiple = projectImages.length > 1;
 
+              const currentFit =
+                selectedProject.imageFits && selectedProject.imageFits[modalImgIndex]
+                  ? selectedProject.imageFits[modalImgIndex]
+                  : selectedProject.imageFit || (hasMultiple ? "contain" : "cover");
+
+              const currentPos =
+                selectedProject.imagePositions && selectedProject.imagePositions[modalImgIndex]
+                  ? selectedProject.imagePositions[modalImgIndex]
+                  : selectedProject.imagePosition;
+
+              const isCover = currentFit === "cover";
+
               return (
                 <div className="relative h-72 sm:h-96 md:h-[480px] bg-[#0D0E0E] overflow-hidden shrink-0 flex items-center justify-center">
-                  {/* Ambient background fill to fill the box edge-to-edge */}
-                  <img
-                    src={optimizeCloudinary(currentImg, 300)}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-cover blur-2xl scale-125 opacity-40 pointer-events-none"
-                  />
+                  {/* Ambient background fill (shown when contained or as backdrop) */}
+                  {!isCover && (
+                    <img
+                      src={optimizeCloudinary(currentImg, 300)}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 w-full h-full object-cover blur-2xl scale-125 opacity-40 pointer-events-none"
+                    />
+                  )}
 
-                  {/* Foreground image completely visible without being cropped */}
+                  {/* Main displayed image */}
                   <img
                     key={currentImg}
                     src={optimizeCloudinary(currentImg, 1400)}
                     alt={selectedProject.title}
                     decoding="async"
-                    className="relative z-10 max-w-full max-h-full object-contain p-2 sm:p-4 transition-all duration-300 animate-fadeIn"
+                    style={
+                      isCover && currentPos && !currentPos.startsWith("object-")
+                        ? { objectPosition: currentPos }
+                        : undefined
+                    }
+                    className={`relative z-10 transition-all duration-300 animate-fadeIn ${
+                      isCover
+                        ? `w-full h-full object-cover ${currentPos?.startsWith("object-") ? currentPos : "object-center"}`
+                        : "max-w-full max-h-full object-contain p-2 sm:p-4"
+                    }`}
                   />
                   {/* Subtle top & bottom gradient overlays */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/60 pointer-events-none z-10"></div>
