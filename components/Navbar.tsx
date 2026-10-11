@@ -91,12 +91,11 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="tel:+917511111000"
-              className="inline-flex items-center gap-2 bg-[#D35400] hover:bg-[#B84700] text-white px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold uppercase text-[11px] sm:text-xs tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95"
-              title="Call +91 75111 11000"
+              className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-4 py-2.5 rounded-lg font-bold uppercase text-xs tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95"
+              title="Call Kerala Homes & Developers"
             >
-              <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
-              <span className="hidden sm:inline">+91 75111 11000</span>
-              <span className="sm:hidden">Call Us</span>
+              <PhoneCall className="w-4 h-4 text-white" />
+              <span>Call</span>
             </a>
 
             <button
@@ -142,10 +141,10 @@ export default function Navbar() {
               <div className="grid grid-cols-2 gap-3">
                 <a
                   href="tel:+917511111000"
-                  className="bg-[#D35400] hover:bg-[#B84700] text-white py-3 rounded-lg font-bold uppercase text-xs tracking-wider shadow flex items-center justify-center gap-2 text-center"
+                  className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white py-3 rounded-lg font-bold uppercase text-xs tracking-wider shadow flex items-center justify-center gap-2 text-center"
                 >
                   <PhoneCall className="w-4 h-4" />
-                  <span>Call Us</span>
+                  <span>Call</span>
                 </a>
                 <button
                   onClick={() => {
