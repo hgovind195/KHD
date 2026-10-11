@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Building, Compass, PenTool, ShieldCheck } from "lucide-react";
+import { ArrowRight, Building, Compass, PenTool, ShieldCheck, PhoneCall } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function BrandTree() {
@@ -76,12 +76,24 @@ export default function BrandTree() {
               <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-6 flex-grow">
                 From planning to project completion, we oversee every detail. Through site supervision, survey verification, contractor coordination, and quality checks, we ensure your project is completed accurately and as planned.
               </p>
-              <Link
-                href="/services#masterplan"
-                className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest border-b-2 border-[#355E3B]/30 pb-1 hover:border-[#355E3B] transition-colors"
-              >
-                Consult Advisory <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="w-full pt-4 border-t border-gray-100 flex items-center justify-between gap-2 mt-auto">
+                <Link
+                  href="/services#masterplan"
+                  className="inline-flex items-center gap-1.5 text-[#355E3B] font-bold text-xs uppercase tracking-wider hover:text-[#2B4C30] transition-colors"
+                >
+                  <span>Consult Advisory</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+
+                <a
+                  href="tel:+917511127335"
+                  className="inline-flex items-center gap-1.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-3 py-1.5 rounded-lg font-bold uppercase text-[11px] tracking-wider shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
+                  title="Call Master Plan (+91 75111 27335)"
+                >
+                  <PhoneCall className="w-3.5 h-3.5 text-white" />
+                  <span>Call</span>
+                </a>
+              </div>
             </div>
           </ScrollReveal>
 
@@ -107,12 +119,24 @@ export default function BrandTree() {
               <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
                 Turnkey residential high-rises, luxury villas, and commercial complexes engineered for durability, modern elegance, and structural safety across Kerala.
               </p>
-              <Link
-                href="/services#construction"
-                className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest border-b-2 border-[#355E3B] pb-1 hover:text-[#2B4C30] hover:border-[#2B4C30] transition-colors"
-              >
-                Get In Detail <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="w-full pt-4 border-t border-gray-100 flex items-center justify-between gap-2 mt-auto">
+                <Link
+                  href="/services#construction"
+                  className="inline-flex items-center gap-1.5 text-[#355E3B] font-bold text-xs uppercase tracking-wider hover:text-[#2B4C30] transition-colors"
+                >
+                  <span>Get In Detail</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+
+                <a
+                  href="tel:+917511111000"
+                  className="inline-flex items-center gap-1.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-3.5 py-1.5 rounded-lg font-bold uppercase text-[11px] tracking-wider shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
+                  title="Call Kerala Homes (+91 75111 11000)"
+                >
+                  <PhoneCall className="w-3.5 h-3.5 text-white" />
+                  <span>Call</span>
+                </a>
+              </div>
             </div>
           </ScrollReveal>
 
@@ -138,12 +162,24 @@ export default function BrandTree() {
               <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-6 flex-grow">
                 Architectural masterpieces crafted with artistic vision, 3D spatial modeling, and sustainable interior design tailored for luxury living.
               </p>
-              <Link
-                href="/services#innovature"
-                className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest border-b-2 border-[#355E3B]/30 pb-1 hover:border-[#355E3B] transition-colors"
-              >
-                Explore Studio <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="w-full pt-4 border-t border-gray-100 flex items-center justify-between gap-2 mt-auto">
+                <Link
+                  href="/services#innovature"
+                  className="inline-flex items-center gap-1.5 text-[#355E3B] font-bold text-xs uppercase tracking-wider hover:text-[#2B4C30] transition-colors"
+                >
+                  <span>Explore Studio</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+
+                <a
+                  href="tel:+918921955878"
+                  className="inline-flex items-center gap-1.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-3 py-1.5 rounded-lg font-bold uppercase text-[11px] tracking-wider shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
+                  title="Call Innovature Designs (+91 89219 55878)"
+                >
+                  <PhoneCall className="w-3.5 h-3.5 text-white" />
+                  <span>Call</span>
+                </a>
+              </div>
             </div>
           </ScrollReveal>
         </div>
