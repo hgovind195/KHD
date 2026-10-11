@@ -405,7 +405,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Membership 1: BAI */}
             <div className="bg-white border-2 border-[#355E3B]/30 rounded-2xl p-6 md:p-7 flex flex-col justify-between shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all">
               <div className="space-y-4">
@@ -485,7 +485,7 @@ export default function AboutPage() {
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#D35400] bg-[#D35400]/10 px-2.5 py-0.5 rounded-full inline-block">
-                    ROC Registration
+                    Corporate License
                   </span>
                   <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
                     Company Incorporation Certificate
@@ -501,6 +501,37 @@ export default function AboutPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D35400] hover:text-[#B84700] underline underline-offset-4 decoration-[#D35400]/40 hover:decoration-[#D35400] transition-colors"
+                >
+                  <span>View Document</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Card 5: COMPANY TAN NUMBER */}
+            <div className="bg-white border-2 border-[#355E3B]/30 rounded-2xl p-6 md:p-7 flex flex-col justify-between shadow-lg hover:border-[#355E3B] hover:-translate-y-1 transition-all group">
+              <div className="space-y-4">
+                <div className="w-14 h-14 bg-[#355E3B]/10 text-[#355E3B] rounded-xl flex items-center justify-center shrink-0 border border-[#355E3B]/20">
+                  <FileCheck className="w-7 h-7 text-[#355E3B]" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#355E3B] bg-[#355E3B]/10 px-2.5 py-0.5 rounded-full inline-block">
+                    Tax Deduction Account
+                  </span>
+                  <h3 className="font-extrabold text-base md:text-lg text-[#1B1C1C] uppercase leading-tight">
+                    Company TAN Number
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Official Tax Deduction and Collection Account Number allotted by the Income Tax Department, Government of India.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-4 mt-3 border-t border-gray-100 flex items-center justify-between">
+                <a
+                  href="https://res.cloudinary.com/w1tsvtbe/image/upload/v1787921511/TAN_NUMBER_rz2myh.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#355E3B] hover:text-[#2B4C30] underline underline-offset-4 decoration-[#355E3B]/40 hover:decoration-[#355E3B] transition-colors"
                 >
                   <span>View Document</span>
                   <ExternalLink className="w-3.5 h-3.5" />
