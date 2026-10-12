@@ -240,12 +240,13 @@ export default function HomePage() {
                 </h2>
               </div>
 
-              <Link
-                href="/projects"
-                className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest hover:underline"
+              <button
+                type="button"
+                onClick={() => setQuoteModalOpen(true)}
+                className="inline-flex items-center gap-2 text-[#355E3B] font-bold text-xs uppercase tracking-widest hover:underline cursor-pointer transition-colors"
               >
-                View All Projects <ArrowRight className="w-4 h-4" />
-              </Link>
+                Inquire About Projects <ArrowRight className="w-4 h-4" />
+              </button>
             </div>
           </ScrollReveal>
 

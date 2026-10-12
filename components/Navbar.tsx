@@ -27,6 +27,12 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  const handleHomeClick = () => {
+    if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
@@ -63,7 +69,7 @@ export default function Navbar() {
         {/* Main Navbar */}
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0 shrink">
+          <Link href="/" onClick={handleHomeClick} className="flex items-center gap-2 sm:gap-3 group min-w-0 shrink">
             <img
               src="https://res.cloudinary.com/w1tsvtbe/image/upload/f_auto,q_auto,w_240/v1785851706/font_tp_pinjpz.png"
               alt="Kerala Homes Logo"
@@ -91,6 +97,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
+                  onClick={link.href === "/" ? handleHomeClick : undefined}
                   className={`uppercase text-xs font-bold tracking-widest transition-all py-1 border-b-2 ${
                     isActive
                       ? "text-[#355E3B] border-[#355E3B]"
@@ -163,7 +170,10 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      if (link.href === "/") handleHomeClick();
+                    }}
                     className={`flex items-center justify-between py-3 px-4 rounded-xl text-sm font-bold uppercase tracking-wider transition-colors ${
                       isActive
                         ? "bg-[#355E3B] text-white shadow-sm"

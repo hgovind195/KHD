@@ -19,6 +19,10 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://keralahomes.co.in"),
+  alternates: {
+    canonical: "https://keralahomes.co.in/",
+  },
   title: "KERALA HOMES & DEVELOPERS PVT. LTD. | Building the Future",
   description:
     "Official corporate site of Kerala Homes & Developers Pvt. Ltd. Leading builders in Kerala specializing in turnkey residential villas, commercial high-rises, master plan engineering consultancy, and architectural design.",
