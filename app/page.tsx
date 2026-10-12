@@ -176,7 +176,7 @@ export default function HomePage() {
               </button>
 
               <Link
-                href="/projects"
+                href="#projects"
                 className="border-2 border-white/30 hover:border-[#355E3B] bg-white/5 hover:bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-lg font-bold uppercase text-xs tracking-widest text-center transition-all hover-lift"
               >
                 View Signature Projects
@@ -227,7 +227,7 @@ export default function HomePage() {
       <BrandTree />
 
       {/* Signature Projects Section */}
-      <section className="bg-[#1B1C1C] text-white py-20 px-4 md:px-8">
+      <section id="projects" className="bg-[#1B1C1C] text-white py-20 px-4 md:px-8 scroll-mt-20 md:scroll-mt-28">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal direction="up">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">

@@ -78,7 +78,7 @@ export default function Footer() {
               <Link href="/services" className="hover:text-white transition-colors">Engineering & Design Services</Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-white transition-colors">Signature Projects Portfolio</Link>
+              <Link href="/#projects" className="hover:text-white transition-colors">Signature Projects Portfolio</Link>
             </li>
             <li>
               <Link href="/contact" className="hover:text-white transition-colors">Contact & Location Maps</Link>
