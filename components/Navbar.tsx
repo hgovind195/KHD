@@ -37,7 +37,7 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Projects", href: "/#projects" },
+    { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -98,11 +98,10 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={link.href === "/" ? handleHomeClick : undefined}
-                  className={`uppercase text-xs font-bold tracking-widest transition-all py-1 border-b-2 ${
-                    isActive
-                      ? "text-[#355E3B] border-[#355E3B]"
-                      : "text-[#1B1C1C] border-transparent hover:text-[#355E3B] hover:border-[#355E3B]/50"
-                  }`}
+                  className={`uppercase text-xs font-bold tracking-widest transition-all py-1 border-b-2 ${isActive
+                    ? "text-[#355E3B] border-[#355E3B]"
+                    : "text-[#1B1C1C] border-transparent hover:text-[#355E3B] hover:border-[#355E3B]/50"
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -156,11 +155,10 @@ export default function Navbar() {
 
         {/* Mobile Menu Drawer */}
         <div
-          className={`fixed top-[58px] sm:top-[66px] md:top-[74px] left-0 right-0 z-50 bg-white border-b border-[#ECEFEC] shadow-2xl lg:hidden max-h-[calc(100dvh-58px)] sm:max-h-[calc(100dvh-66px)] overflow-y-auto transition-all duration-300 ease-in-out ${
-            mobileMenuOpen
-              ? "opacity-100 translate-y-0 pointer-events-auto visible"
-              : "opacity-0 -translate-y-3 pointer-events-none invisible"
-          }`}
+          className={`fixed top-[58px] sm:top-[66px] md:top-[74px] left-0 right-0 z-50 bg-white border-b border-[#ECEFEC] shadow-2xl lg:hidden max-h-[calc(100dvh-58px)] sm:max-h-[calc(100dvh-66px)] overflow-y-auto transition-all duration-300 ease-in-out ${mobileMenuOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto visible"
+            : "opacity-0 -translate-y-3 pointer-events-none invisible"
+            }`}
         >
           <div className="px-5 py-6 space-y-4">
             <div className="flex flex-col space-y-2">
@@ -174,11 +172,10 @@ export default function Navbar() {
                       setMobileMenuOpen(false);
                       if (link.href === "/") handleHomeClick();
                     }}
-                    className={`flex items-center justify-between py-3 px-4 rounded-xl text-sm font-bold uppercase tracking-wider transition-colors ${
-                      isActive
-                        ? "bg-[#355E3B] text-white shadow-sm"
-                        : "text-[#1B1C1C] hover:bg-gray-100 active:bg-gray-200"
-                    }`}
+                    className={`flex items-center justify-between py-3 px-4 rounded-xl text-sm font-bold uppercase tracking-wider transition-colors ${isActive
+                      ? "bg-[#355E3B] text-white shadow-sm"
+                      : "text-[#1B1C1C] hover:bg-gray-100 active:bg-gray-200"
+                      }`}
                   >
                     <span>{link.name}</span>
                     <ChevronRight className={`w-4 h-4 ${isActive ? "text-white" : "text-gray-400"}`} />
